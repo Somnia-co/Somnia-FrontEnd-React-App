@@ -2,9 +2,15 @@ import React from 'react';
 import './Footer.css';
 import logo from '../../images/Logo/Somnialogo1.png'
 
-function Header(){
+function Header(props){
+
+    function handleChange(event){
+        //let's envoke callback with new value
+        props.onChange(event.target.value);
+    }
+
     return(
-        <header className='header'>
+        <header value={props.value} onChange={handleChange} className='header'>
             <div className = 'RowFlex'>
                 <img className='logo' alt='Somnia Logo' src={logo}></img>
                 <h1 class='logo'>SEASON II</h1>
