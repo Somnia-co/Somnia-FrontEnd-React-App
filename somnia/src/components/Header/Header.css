@@ -6,11 +6,9 @@
 img.logo{
     width: 10vh;
 }
-h1{
-    font-size: 8vh;
-    font-family: var(--fontFamily);
-}
+
 .header{
+    margin-top: 2vh;
     margin-left: 5vh;
     margin-right: 5vh;
     display: flex;

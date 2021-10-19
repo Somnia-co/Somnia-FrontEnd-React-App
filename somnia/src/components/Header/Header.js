@@ -1,6 +1,8 @@
 import React from 'react';
-import './Footer.css';
+import './Header.css';
 import logo from '../../images/Logo/Somnialogo1.png'
+import Search from './Search/Search';
+import Collection from './Collection/Collection';
 
 function Header(props){
 
@@ -9,12 +11,12 @@ function Header(props){
         props.onChange(event.target.value);
     }
 
+    let leftSide = <Collection></Collection>;
+    if(props.search == true) leftSide = <Search></Search>
+    
     return(
-        <header value={props.value} onChange={handleChange} className='header'>
-            <div className = 'RowFlex'>
-                <img className='logo' alt='Somnia Logo' src={logo}></img>
-                <h1 class='logo'>SEASON II</h1>
-        </div>
+        <header lan={props.lan} onChange={handleChange} className='header'>
+        {leftSide}
         <div class='RowFlex'>
             <div class='RowFlex lan'onclick="ChangeLanguage()">
                 <p class='lan'>HU</p>

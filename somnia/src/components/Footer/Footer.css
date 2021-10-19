@@ -1,0 +1,4 @@
+.Footer{
+    height: var(--foterHeight);
+    border-top: solid 2px var(--mainColor);
+}

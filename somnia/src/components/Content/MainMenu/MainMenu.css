@@ -1,0 +1,16 @@
+.MainMenu{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.MainMenuLogo{
+    width: 200px;
+}
+
+.MenuItem{
+    color: white;
+    margin: 5px;
+}
