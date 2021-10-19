@@ -1,0 +1,50 @@
+
+.logo{
+    fill:var(--mainColor);
+    color: var(--mainColor);
+}
+img.logo{
+    width: 10vh;
+}
+h1{
+    font-size: 8vh;
+    font-family: var(--fontFamily);
+}
+.header{
+    margin-left: 5vh;
+    margin-right: 5vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.RowFlex{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:2vh;
+    align-content: center;
+
+}
+.RowFlex.lan{
+    gap:0;
+    cursor: pointer;
+}
+p.lan{
+    color: var(--mainColor);
+    font-family: var(--fontFamily);
+    margin:0;
+    padding:0;
+}
+.loginIcon{
+    fill:var(--mainColor);
+    width: 7vh;
+    height: 7vh;
+    cursor: pointer;
+    transition: var(--transitionDuration);
+}
+.loginIcon:hover{
+    width: 8vh;
+    height: 8vh;
+    transition: var(--transitionDuration);
+}
