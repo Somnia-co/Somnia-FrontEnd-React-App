@@ -26,7 +26,6 @@ img.logo{
 }
 .RowFlex.lan{
     gap:0;
-    cursor: pointer;
 }
 p.lan{
     color: var(--mainColor);
@@ -45,4 +44,12 @@ p.lan{
     width: 8vh;
     height: 8vh;
     transition: var(--transitionDuration);
+}
+
+p.lan.option:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+p.lan.option.Active{
+    text-decoration: underline;
 }
