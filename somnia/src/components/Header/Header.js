@@ -19,11 +19,16 @@ function Header(props){
     
     
     function handleLanguageChange(newLanguage){
-        //let's envoke callback with new value
-        //newLanguage is EN or HU, depending what user click
+        
+        //disable old language selection
         let SelectedItem = document.getElementById(HeaderLan);
         SelectedItem.classList.remove('Active');
+
+        //set new language for the element
         SetHeaderLan(newLanguage);
+
+        //let's envoke callback with new value
+        //newLanguage is EN or HU, depending what user click
         props.onChange(newLanguage);
         //this.SetHeaderLan(newLanguage);
     }
