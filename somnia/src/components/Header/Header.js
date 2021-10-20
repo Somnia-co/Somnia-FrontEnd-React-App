@@ -15,15 +15,17 @@ function Header(props){
     useEffect(() => {
         let SelectedItem = document.getElementById(HeaderLan);
         SelectedItem.classList.add('Active');
-        
     })
     
     
-    function handleLanguageChange(argument){
+    function handleLanguageChange(newLanguage){
         //let's envoke callback with new value
-        //argument is EN or HU, depending what user click
-        props.onChange(argument);
-        //this.SetHeaderLan(argument);
+        //newLanguage is EN or HU, depending what user click
+        let SelectedItem = document.getElementById(HeaderLan);
+        SelectedItem.classList.remove('Active');
+        SetHeaderLan(newLanguage);
+        props.onChange(newLanguage);
+        //this.SetHeaderLan(newLanguage);
     }
 
     let leftSide = <Collection></Collection>;
