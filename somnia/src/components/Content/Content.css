@@ -1,3 +1,3 @@
 .Content{
-    margin: 100px 100px;
+    margin: var(--ContentMargin);
 }

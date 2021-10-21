@@ -5,7 +5,18 @@
   --transitionDuration: .2s;
   --fontFamily: 'Roboto', sans-serif;
   --foterHeight: 10vh;
-  
+
+
+  --MainMenuLogoHeight: 200px;
+  --MainMenuItemsMargin: 5px;
+
+  --ContentMargin: 100px 100px;
+
+
+  --SearchIconSize: 30px;
+  --SearchBarHeight: 25px;
+  --SearchBarWidth: 300px;
+  --SearchBarBorderRadius: 15px;
 }
 
 body {

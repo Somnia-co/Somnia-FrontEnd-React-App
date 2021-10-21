@@ -40,11 +40,11 @@ p.lan{
     cursor: pointer;
     transition: var(--transitionDuration);
 }
-.loginIcon:hover{
+/* .loginIcon:hover{
     width: 8vh;
     height: 8vh;
     transition: var(--transitionDuration);
-}
+} */
 
 p.lan.option:hover{
     text-decoration: underline;

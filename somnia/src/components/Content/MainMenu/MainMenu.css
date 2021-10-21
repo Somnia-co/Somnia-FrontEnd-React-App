@@ -7,10 +7,10 @@
 }
 
 .MainMenuLogo{
-    width: 200px;
+    width: var(--MainMenuLogoHeight);
 }
 
 .MenuItem{
-    color: white;
-    margin: 5px;
+    color: var(--mainColor);
+    margin: var(--MainMenuItemsMargin);
 }
