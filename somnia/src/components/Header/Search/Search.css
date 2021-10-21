@@ -27,7 +27,12 @@ input.SearchInput{
     box-shadow: none;
     outline: none;
 }
-
+svg.SearchInput{
+    fill:white;
+    width: 15px;
+    margin: 0;
+    cursor: pointer;
+}
 .Hidden{
     display: none;
     transition: var(--transitionDuration);

@@ -13,6 +13,7 @@ function Header(props){
 
     //we should set then active element in the language selection items
     useEffect(() => {
+        
         let SelectedItem = document.getElementById(HeaderLan);
         SelectedItem.classList.add('Active');
     })
