@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Header from './components/Header/Header';
 import Content from "./components/Content/Content";
 import Footer from './components/Footer/Footer';
@@ -6,25 +6,46 @@ import Footer from './components/Footer/Footer';
 function App() {
 
   //here we have the state of our React function
-  const [lan, setLan] = React.useState('EN');
-  const [search,setSearch] = React.useState(true);
+  const [lan, setLan] = useState('EN');
+  const [search, setSearch] = useState(true);
+  const [login, SetLogin] = useState(false);
+  const [ActiveContent, SetActiveContent] = useState('MENU');
 
   //it's simillar to ComponentDidMount, so it's envoked every
   //time state hanges
   useEffect(() => {
-    document.title='Somnia';
+    document.title = 'Somnia';
   })
 
+
+
   //the function for changing React function state
-  function handleChange(newStateValue){
-    setLan(newStateValue);
+  function handleChange(newStateValue) {
+    switch (newStateValue.type.toUpperCase()) {
+      case 'LANCHANGE':
+        {
+          setLan(newStateValue.value);
+        }
+
+      case 'LOGIN':
+        {
+          SetLogin(newStateValue.value);
+          SetActiveContent('LOGIN');
+          console.log(login);
+        }
+      default:
+        {
+          SetActiveContent('MENU');
+          SetLogin(false);
+        }
+    }
   }
 
   //the main app
   return (
     <div className="App">
       <Header lan={lan} search={search} onChange={handleChange}></Header>
-      <Content lan = {lan}></Content>
+      <Content lan={lan} activeContent={ActiveContent}></Content>
       <Footer lan={lan}></Footer>
     </div>
   );

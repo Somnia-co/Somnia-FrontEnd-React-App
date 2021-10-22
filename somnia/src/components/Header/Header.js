@@ -43,9 +43,9 @@ function Header(props){
         {leftSide}
         <div class='RowFlex'>
             <div class='RowFlex lan'>
-                <p class='lan option' id='HU' onClick={() => SetHeaderLan('HU')}>HU</p>
-                <p class='lan'>/</p>
-                <p class='lan option' id='EN' onClick={() => SetHeaderLan('EN')}>EN</p>
+                <p className='lan option' id='HU' onClick={() => SetHeaderLan('HU')}>HU</p>
+                <p className='lan'>/</p>
+                <p className='lan option' id='EN' onClick={() => SetHeaderLan('EN')}>EN</p>
             </div>
             <Login SetLoginAttempt={props.onChange}></Login>
         </div>
