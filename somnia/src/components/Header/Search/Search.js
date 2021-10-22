@@ -3,8 +3,11 @@ import './Search.css';
 
 function Search(props) {
 
-    function Toggle(activeState, prevState) {
-        if (activeState === prevState) return;
+
+    const [ActiveSearch, SetActiveSearch] = React.useState(false);
+
+    //useEffect is envoked every time we update the component. Also when it mounts.
+    useEffect(() => {
 
         const SearchInput = document.getElementById('SearchInput');
         const SearchInputAbort = document.getElementById('SearchInputSvg');
@@ -17,19 +20,7 @@ function Search(props) {
             SearchInput.classList.add('Hidden');
             SearchInputAbort.classList.add('Hidden');
         }
-    }
-    const [ActiveSearch, SetActiveSearch] = React.useState(false);
-    const [IsLoaded,SetIsLoaded] = React.useState(false);
-    let prev = useRef();
-
-    //useEffect is envoked every time we update the component. Also when it mounts.
-    useEffect(() => {
-        prev.current = ActiveSearch;
-        SetIsLoaded(true);
-    })
-
-    //if the component was already loaded, we can check if we have to toggle the searchBar
-    if(IsLoaded) Toggle(ActiveSearch,prev.current);
+    },[ActiveSearch])
 
     return (
         <div className='RowFlex'>

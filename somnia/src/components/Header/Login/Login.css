@@ -1,0 +1,7 @@
+.loginIcon{
+    fill:var(--mainColor);
+    width: 7vh;
+    height: 7vh;
+    cursor: pointer;
+    transition: var(--transitionDuration);
+}
