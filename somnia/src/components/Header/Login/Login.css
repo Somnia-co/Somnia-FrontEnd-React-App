@@ -5,3 +5,7 @@
     cursor: pointer;
     transition: var(--transitionDuration);
 }
+
+.loginIcon.Hidden{
+    display:none;
+}

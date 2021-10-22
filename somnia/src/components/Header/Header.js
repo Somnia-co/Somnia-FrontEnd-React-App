@@ -29,7 +29,7 @@ function Header(props){
 
         //let's envoke callback with new value
         //newLanguage is EN or HU, depending what user click
-        props.onChange(HeaderLan);
+        props.onChange({type: 'LanChange', value: HeaderLan});
         //this.SetHeaderLan(newLanguage);
     },[HeaderLan])
     
@@ -47,7 +47,7 @@ function Header(props){
                 <p class='lan'>/</p>
                 <p class='lan option' id='EN' onClick={() => SetHeaderLan('EN')}>EN</p>
             </div>
-            <Login></Login>
+            <Login SetLoginAttempt={props.onChange}></Login>
         </div>
     </header>
     );
