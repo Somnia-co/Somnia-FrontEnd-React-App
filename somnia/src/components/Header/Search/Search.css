@@ -4,6 +4,7 @@
 }
 .SearchIcon:hover{
     cursor: pointer;
+    fill:var(--hoverColor);
 }
 
 .RowFlex{
@@ -28,7 +29,7 @@ input.SearchInput{
     outline: none;
 }
 svg.SearchInput{
-    fill:white;
+    fill:var(--mainColor);
     width: 15px;
     margin: 0;
     cursor: pointer;

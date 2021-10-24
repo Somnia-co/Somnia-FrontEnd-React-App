@@ -14,3 +14,13 @@
     color: var(--mainColor);
     margin: var(--MainMenuItemsMargin);
 }
+
+h1.MenuItem{
+    cursor: pointer;
+}
+h1.MenuItem:hover{
+    color:var(--hoverColor);
+}
+h1.MainItem:active{
+    color:var(--elementActiveColor);
+}

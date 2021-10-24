@@ -5,7 +5,9 @@
     cursor: pointer;
     transition: var(--transitionDuration);
 }
-
+.loginIcon:hover{
+    fill:var(--hoverColor);
+}
 .loginIcon.Hidden{
     display:none;
 }

@@ -15,8 +15,8 @@ function App() {
   //time state hanges
   useEffect(() => {
     document.title = 'Somnia';
+    console.log(ActiveContent);
   })
-
 
 
   //the function for changing React function state
@@ -31,7 +31,6 @@ function App() {
         {
           SetLogin(newStateValue.value);
           SetActiveContent('LOGIN');
-          console.log(login);
         }
       default:
         {

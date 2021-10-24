@@ -33,18 +33,10 @@ p.lan{
     margin:0;
     padding:0;
 }
-.loginIcon{
-    fill:var(--mainColor);
-    width: 7vh;
-    height: 7vh;
-    cursor: pointer;
-    transition: var(--transitionDuration);
+p.lan:hover{
+    color:var(--hoverColor);
 }
-/* .loginIcon:hover{
-    width: 8vh;
-    height: 8vh;
-    transition: var(--transitionDuration);
-} */
+
 
 p.lan.option:hover{
     text-decoration: underline;
