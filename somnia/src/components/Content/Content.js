@@ -3,6 +3,8 @@ import './Content.css';
 import MainMenu from "./MainMenu/MainMenu";
 import Login from "./Login/Login";
 import About from "./About/About";
+import Collections from "./Collections/Collections";
+import Products from "./Products/Products";
 
 
 function Content(props){
@@ -14,8 +16,8 @@ function Content(props){
             case 'LOGIN': return <Login onChange={HandleChange}></Login>;
             case 'MENU' : return <MainMenu onChange={HandleChange}></MainMenu>;
             case 'ABOUT' : return<About  onChange={HandleChange}></About>;
-            case 'COLLECTIONS': return;
-            case 'PRODUCTS':return;
+            case 'COLLECTIONS': return <Collections onChange={HandleChange}></Collections>;
+            case 'PRODUCTS':return<Products onChange={HandleChange}></Products>;
             
         }
     }
