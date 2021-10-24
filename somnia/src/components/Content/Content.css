@@ -1,4 +1,7 @@
 .Content{
     margin: var(--ContentMargin);
-    
+    height: var(--contentHeight);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

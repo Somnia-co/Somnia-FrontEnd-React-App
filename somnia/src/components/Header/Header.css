@@ -8,7 +8,8 @@ img.logo{
 }
 
 .header{
-    margin-top: 2vh;
+    height: var(--headerHeight);
+    margin: var(--headerMargin);
     margin-left: 5vh;
     margin-right: 5vh;
     display: flex;

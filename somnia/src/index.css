@@ -6,13 +6,17 @@
   --elementActiveColor: silver;
   --transitionDuration: .2s;
   --fontFamily: 'Roboto', sans-serif;
-  --foterHeight: 10vh;
+  --foterHeight: 6vh;
+  --headerHeight: 6vh;
+  --headerMargin: 10px;
+  --contentHeight: calc(100vh - var(--foterHeight) - var(--headerHeight) - var(--headerMargin));
+  
 
 
   --MainMenuLogoHeight: 200px;
   --MainMenuItemsMargin: 5px;
 
-  --ContentMargin: 100px 100px;
+  --ContentMargin: 0;
 
 
   --SearchIconSize: 30px;
@@ -22,6 +26,8 @@
 }
 
 body {
+  overflow-y:hidden;
+  overflow-x: hidden;
   background-color: black;
   padding: 0;
   margin: 0;

@@ -1,4 +1,21 @@
 .Footer{
     height: var(--foterHeight);
     border-top: solid 2px var(--mainColor);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.FooterText{
+    color:var(--mainColor);
+    font-size: 12px;
+}
+.FooterSvg{
+    fill: var(--mainColor);
+    height: 15px;
+}
+.FooterSvg:hover{
+    fill: var(--hoverColor);
+    cursor: pointer;
 }
