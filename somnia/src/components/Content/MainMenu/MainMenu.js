@@ -6,7 +6,9 @@ import { render } from '@testing-library/react';
 function MainMenu(props){
 
     function ChooseOption(option){
-        props.onChange({type: 'MenuItemChoosen', value: option});
+      
+            props.onChange({type: 'MenuItemChoosen', value: option});
+        
     }
 
     return(
