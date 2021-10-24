@@ -1,4 +1,16 @@
 .Footer{
     height: var(--foterHeight);
     border-top: solid 2px var(--mainColor);
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.FooterText{
+    color: var(--mainColor);
+    margin: 20px;
+    align-content: center;
+}
+.FooterText svg{
+    fill: white;
 }

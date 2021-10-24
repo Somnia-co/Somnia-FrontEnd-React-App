@@ -1,11 +1,14 @@
 function GetTranslation(component, language){
-    switch(language.toUpper()){
+    switch(language.toUpperCase()){
         case 'EN':
-            switch(component.toUpper()){
+            switch(component.toUpperCase()){
                 case 'HEADER':
                     return {
                         
                     }
+                case 'CONTENT':{
+                    
+                }
 
             }
             break;
