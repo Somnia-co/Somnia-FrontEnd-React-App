@@ -8,6 +8,7 @@
 .loginIcon:hover{
     fill:var(--hoverColor);
 }
-.loginIcon.Hidden{
-    display:none;
+.Hidden{
+    display: none;
 }
+
