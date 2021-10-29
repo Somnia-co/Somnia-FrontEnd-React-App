@@ -37,7 +37,7 @@ function App() {
   return (
     <div className="App">
       <Header lan={lan} search={search} onChange={handleChange}></Header>
-      <Content lan={lan} activeContent={ActiveContent}></Content>
+      <Content lan={lan} activeContent={ActiveContent} onChange={handleChange}></Content>
       <Footer lan={lan}></Footer>
     </div>
   );

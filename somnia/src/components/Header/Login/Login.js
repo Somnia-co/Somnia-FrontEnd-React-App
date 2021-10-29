@@ -1,16 +1,20 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import "./Login.css";
 
 export default function Login(props) {
   const [UserLogged, SetUserLogged] = useState(false);
 
   function LoginAttempt() {
-    const loginIcon = document.getElementById("LoginIcon");
-    loginIcon.classList.add("Hidden");
+    // const loginIcon = document.getElementById("LoginIcon");
+    // loginIcon.classList.add("Hidden");
 
     props.SetLoginAttempt({ type: "Login", value: true });
   }
 
+  useEffect(()=>{
+    const loginIcon = document.getElementById("LoginIcon");
+    loginIcon.classList.remove("Hidden");
+  })
   return (
     <div>
       <svg

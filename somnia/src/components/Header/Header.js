@@ -47,7 +47,7 @@ function Header(props){
                 <p className='lan'>/</p>
                 <p className='lan option' id='EN' onClick={() => SetHeaderLan('EN')}>EN</p>
             </div>
-            <Login SetLoginAttempt={props.onChange}></Login>
+            <Login SetLoginAttempt={props.onChange} loginVisible = {false}></Login>
         </div>
     </header>
     );

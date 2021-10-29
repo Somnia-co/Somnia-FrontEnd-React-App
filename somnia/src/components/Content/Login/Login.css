@@ -1,0 +1,22 @@
+.LoginForm{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+}
+
+input.LoginInput{
+    width: 400px;
+    height: 30px;
+    border-radius: 30px;
+}
+
+label.LoginLabel{
+    color:var(--mainColor);
+}
+.LoginLogo{
+    width: 100px;
+    margin: 20px;
+}

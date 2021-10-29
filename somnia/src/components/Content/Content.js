@@ -11,8 +11,14 @@ function Content(props) {
     props.activeContent.toString().toUpperCase()
   );
 
+  let ActiveContent = GetActiveElement();
+
+  useEffect(() => {
+    if(props.activeContent == 'LOGIN') SetActiveItem(props.activeContent) ;
+  });
+
   function GetActiveElement() {
-    switch (props.activeContent) {
+    switch (ActiveItem) {
       case "LOGIN":
         return <Login onChange={HandleChange}></Login>;
 
@@ -47,6 +53,9 @@ function Content(props) {
           case "PRODUCTS":
             SetActiveItem(newStateValue.value.toString().toUpperCase());
             break;
+          case "LOGIN":
+            SetActiveItem(newStateValue.value.toString().toUpperCase());
+            break;
           default:
             return;
         }
@@ -55,6 +64,7 @@ function Content(props) {
         switch (newStateValue.value.toString().toUpperCase()) {
           case "MENU":
             SetActiveItem(newStateValue.value.toString().toUpperCase());
+            props.onChange({type:'SetDefaults'});
             break;
           default:
             return;
@@ -64,10 +74,6 @@ function Content(props) {
         return;
     }
   }
-  let ActiveContent = GetActiveElement();
-
-  useEffect(() => {
-  });
 
   return <div class="Content">{ActiveContent}</div>;
 }
