@@ -7,7 +7,6 @@ function Search(props) {
   const [ActiveSearch, SetActiveSearch] = React.useState(false);
 
   const globalLanguage = UseLanguageContext();
-  console.log(globalLanguage);
   //useEffect is envoked every time we update the component. Also when it mounts.
   useEffect(() => {
     const SearchInput = document.getElementById("SearchInput");

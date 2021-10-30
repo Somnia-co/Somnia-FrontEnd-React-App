@@ -15,7 +15,6 @@ export default function App() {
   //time state hanges
   useEffect(() => {
     document.title = "Somnia";
-    console.log("xd");
   });
 
   //the function for changing React function state
