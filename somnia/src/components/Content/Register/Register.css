@@ -1,4 +1,4 @@
-.LoginForm{
+.RegisterForm{
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -7,25 +7,25 @@
     gap:10px;
 }
 
-input.LoginInput{
+input.RegisterInput{
     width: 400px;
     height: 30px;
     border-radius: 30px;
 }
 
-label.LoginLabel{
+label.RegisterLabel{
     color:var(--mainColor);
 }
-.LoginLogo{
+.RegisterLogo{
     width: 100px;
     margin: 20px;
 }
 
-.LoginForm h3{
+.RegisterForm h3{
     color: var(--mainColor);
     cursor: pointer;
     margin: 0;
 }
-.LoginForm h3:hover{
+.RegisterForm h3:hover{
     color:var(--hoverColor);
 }

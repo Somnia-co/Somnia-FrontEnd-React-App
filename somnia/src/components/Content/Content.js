@@ -5,6 +5,7 @@ import Login from "./Login/Login";
 import About from "./About/About";
 import Collections from "./Collections/Collections";
 import Products from "./Products/Products";
+import Register from "./Register/Register";
 
 function Content(props) {
   const [ActiveItem, SetActiveItem] = useState(
@@ -33,7 +34,8 @@ function Content(props) {
 
       case "PRODUCTS":
         return <Products onChange={HandleChange}></Products>;
-
+      case "REGISTER":
+        return <Register onChange={HandleChange}></Register>
       default:
         console.log("default");
         break;
@@ -56,6 +58,10 @@ function Content(props) {
           case "LOGIN":
             SetActiveItem(newStateValue.value.toString().toUpperCase());
             break;
+          case "REGISTER":
+            SetActiveItem(newStateValue.value.toString().toUpperCase());
+            props.onChange({type: 'REGISTER', value:'REGISTER'});
+            break;
           default:
             return;
         }
@@ -65,6 +71,9 @@ function Content(props) {
           case "MENU":
             SetActiveItem(newStateValue.value.toString().toUpperCase());
             props.onChange({type:'SetDefaults'});
+            break;
+          case "LOGIN":
+            SetActiveItem(newStateValue.value.toString().toUpperCase());
             break;
           default:
             return;

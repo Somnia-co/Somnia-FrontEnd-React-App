@@ -2,12 +2,12 @@ import React, { useState,useEffect } from "react";
 import "./Login.css";
 
 export default function Login(props) {
-  const [UserLogged, SetUserLogged] = useState(false);
+  const [LoginTry, SetLoginTry] = useState(false);
 
   function LoginAttempt() {
     // const loginIcon = document.getElementById("LoginIcon");
     // loginIcon.classList.add("Hidden");
-
+    SetLoginTry(true);
     props.SetLoginAttempt({ type: "Login", value: true });
   }
 

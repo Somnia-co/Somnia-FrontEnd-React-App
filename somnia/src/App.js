@@ -14,6 +14,7 @@ function App() {
   //time state hanges
   useEffect(() => {
     document.title = "Somnia";
+    console.log('xd');
   });
 
   //the function for changing React function state
@@ -25,6 +26,11 @@ function App() {
       case "LOGIN":
         SetLogin(newStateValue.value);
         SetActiveContent("LOGIN");
+        break;
+
+      case "REGISTER":
+        SetLogin(false);
+        SetActiveContent('REGISTER');
         break;
       default:
         SetActiveContent("MENU");
