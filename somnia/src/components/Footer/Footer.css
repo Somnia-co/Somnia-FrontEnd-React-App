@@ -10,6 +10,16 @@
 .FooterText{
     color:var(--mainColor);
     font-size: 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.FooterText p:hover{
+    color: var(--hoverColor);
+    cursor: pointer;
 }
 .FooterSvg{
     fill: var(--mainColor);

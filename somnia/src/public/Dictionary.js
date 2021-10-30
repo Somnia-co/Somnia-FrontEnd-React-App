@@ -28,6 +28,14 @@ export function GetTranslation(component, language){
                     cancel: 'cancel',
                     register: 'register'
                     }
+                case 'FOOTER':
+                    return{
+                    contact:'Contact us',
+                    terms: 'Terms and conditions',
+                    privacy: 'Privacy Policy',
+                    shipRet: 'Shipping&Returns',
+                    faq: 'FAQ'
+                    }
                 default: return;
 
             }
