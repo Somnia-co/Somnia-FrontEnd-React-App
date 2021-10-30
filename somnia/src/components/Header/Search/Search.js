@@ -1,13 +1,15 @@
 import React, { useEffect, useRef, useContext } from "react";
 import "./Search.css";
 import { UseLanguageContext } from "../../../globalContext/context/LanguageContext";
+import {GetTranslation} from '../../../public/Dictionary.js'
 
 
 function Search(props) {
   const [ActiveSearch, SetActiveSearch] = React.useState(false);
 
   const globalLanguage = UseLanguageContext();
-  //useEffect is envoked every time we update the component. Also when it mounts.
+  const translation = GetTranslation('SearchBar', globalLanguage.value);
+
   useEffect(() => {
     const SearchInput = document.getElementById("SearchInput");
     const SearchInputAbort = document.getElementById("SearchInputSvg");
@@ -36,7 +38,7 @@ function Search(props) {
           class="SearchInput Hidden"
           id="SearchInput"
           type="text"
-          placeholder="Search something here..."
+          placeholder={translation.placeHolder.toString()}
         ></input>
         <svg
           class="SearchInput Hidden"
