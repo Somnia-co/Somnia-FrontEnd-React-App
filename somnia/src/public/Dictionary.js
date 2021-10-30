@@ -8,7 +8,26 @@ export function GetTranslation(component, language){
                         products: 'PRODUCTS',
                         collections: 'COLLECTIONS'
                     }
-                case 'SEARCHBAR': return{placeHolder:'Search something here...'};
+                case 'SEARCHBAR': 
+                    return{placeHolder:'Search something here...'};
+                case 'LOGIN': 
+                    return {
+                    emailLogin:'email or login',
+                    emailPlaceHolder: 'email address',
+                    password: 'password',
+                    noAccount: "Don't have account yet? Sign up here...",
+                    cancel: 'cancel',
+                    login: 'login'
+                }
+                case 'REGISTER':
+                    return{
+                    emailLogin:'email or login',
+                    email: 'email address',
+                    password: 'password',
+                    passwordAgain: 'password again',
+                    cancel: 'cancel',
+                    register: 'register'
+                    }
                 default: return;
 
             }
@@ -17,9 +36,9 @@ export function GetTranslation(component, language){
                 switch(component.toString().toUpperCase()){
                     case 'MAINMENU':
                         return {
-                            about: 'ABOUT US',
-                            products: 'PRODUCTS',
-                            collections: 'COLLECTIONS'
+                            about: 'Rólunk',
+                            products: 'TERMÉKEK',
+                            collections: 'KOLLEKTÁCIÓK'
                         }
                     case 'SEARCHBAR': return{placeHolder:'Keress valamit itt...'};
                     default: return;
