@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 import Header from "./components/Header/Header";
 import Content from "./components/Content/Content";
 import Footer from "./components/Footer/Footer";
+import { LanguageContextProvider } from "./globalContext/context/LanguageContext";
 
-function App() {
+export default function App() {
   //here we have the state of our React function
   const [lan, setLan] = useState("EN");
   const [search, setSearch] = useState(true);
@@ -14,7 +15,7 @@ function App() {
   //time state hanges
   useEffect(() => {
     document.title = "Somnia";
-    console.log('xd');
+    console.log("xd");
   });
 
   //the function for changing React function state
@@ -30,7 +31,7 @@ function App() {
 
       case "REGISTER":
         SetLogin(false);
-        SetActiveContent('REGISTER');
+        SetActiveContent("REGISTER");
         break;
       default:
         SetActiveContent("MENU");
@@ -41,12 +42,16 @@ function App() {
 
   //the main app
   return (
-    <div className="App">
-      <Header lan={lan} search={search} onChange={handleChange}></Header>
-      <Content lan={lan} activeContent={ActiveContent} onChange={handleChange}></Content>
-      <Footer lan={lan}></Footer>
-    </div>
+    <LanguageContextProvider>
+      <div className="App">
+        <Header lan={lan} search={search} onChange={handleChange}></Header>
+        <Content
+          lan={lan}
+          activeContent={ActiveContent}
+          onChange={handleChange}
+        ></Content>
+        <Footer lan={lan}></Footer>
+      </div>
+    </LanguageContextProvider>
   );
 }
-
-export default App;
