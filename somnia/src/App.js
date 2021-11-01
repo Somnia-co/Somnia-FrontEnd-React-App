@@ -3,10 +3,10 @@ import Header from "./components/Header/Header";
 import Content from "./components/Content/Content";
 import Footer from "./components/Footer/Footer";
 import { LanguageContextProvider } from "./globalContext/context/LanguageContext";
+import { ActiveContentProvider } from "./globalContext/context/ActiveContentContext";
 
 export default function App() {
   //here we have the state of our React function
-  const [lan, setLan] = useState("EN");
   const [search, setSearch] = useState(true);
   const [login, SetLogin] = useState(false);
   const [ActiveContent, SetActiveContent] = useState("MENU");
@@ -21,7 +21,6 @@ export default function App() {
   function handleChange(newStateValue) {
     switch (newStateValue.type.toUpperCase()) {
       case "LANCHANGE":
-        setLan(newStateValue.value);
         break;
       case "LOGIN":
         SetLogin(newStateValue.value);
@@ -41,16 +40,17 @@ export default function App() {
 
   //the main app
   return (
-    <LanguageContextProvider>
-      <div className="App">
-        <Header lan={lan} search={search} onChange={handleChange}></Header>
-        <Content
-          lan={lan}
-          activeContent={ActiveContent}
-          onChange={handleChange}
-        ></Content>
-        <Footer lan={lan}></Footer>
-      </div>
-    </LanguageContextProvider>
+    <ActiveContentProvider>
+      <LanguageContextProvider>
+        <div className="App">
+          <Header search={search} onChange={handleChange}></Header>
+          <Content
+            activeContent={ActiveContent}
+            onChange={handleChange}
+          ></Content>
+          <Footer></Footer>
+        </div>
+      </LanguageContextProvider>
+    </ActiveContentProvider>
   );
 }
