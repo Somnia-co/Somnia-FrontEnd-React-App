@@ -18,10 +18,11 @@ export default function Products(props) {
       <ContentTitle onChange={props.onChange} title={translation.title}></ContentTitle>
       <div className="Products">
         {products.map((product) => {
+            console.log(product)
           return (
             <SingleType
-              type={product.title}
-              products={product.products}
+              type={product.type}
+              products = {product.products}
             ></SingleType>
           );
         })}
