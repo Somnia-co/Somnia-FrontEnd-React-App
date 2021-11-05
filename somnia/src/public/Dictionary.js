@@ -36,6 +36,25 @@ export function GetTranslation(component, language){
                     shipRet: 'Shipping&Returns',
                     faq: 'FAQ'
                     }
+                case 'COLLECTIONS':
+                    return{
+                        title: 'Collections:',
+                        previous: 'Previous page',
+                        contact: 'Contact us'
+                    }
+                case 'ABOUT':
+                    return{
+                        description:   'Some description',
+                        previous: 'Previous page',
+                        contact: 'Contact us',
+                        title: 'About us'
+                    }
+                case 'PRODUCTS':
+                    return{
+                        title: 'Products',
+                        previous: 'Previous page',
+                        contact: 'Contact us'
+                    }
                 default: return;
 
             }

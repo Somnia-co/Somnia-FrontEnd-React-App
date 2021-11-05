@@ -1,0 +1,10 @@
+.SingleType{
+    border: solid var(--mainColor) 2px;
+    width: 40vh;
+    height: 50vh;
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}

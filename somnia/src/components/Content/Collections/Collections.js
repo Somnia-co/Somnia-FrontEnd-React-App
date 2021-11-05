@@ -1,23 +1,29 @@
 import React from "react";
-import './Collections.css';
+import "./Collections.css";
 import { GetCollections } from "../../../public/CollectionsList";
 import CollectionButton from "./collection/CollectionButton.js";
+import { GetTranslation } from "../../../public/Dictionary.js";
+import { UseLanguageContext } from "../../../globalContext/context/LanguageContext";
+import ContentTitle from "../ContentTitle/ContentTitle";
 
-export default function Collections(props){
+export default function Collections(props) {
+  const component = "Collections";
+  const globalLanguage = UseLanguageContext();
 
-    let collections = GetCollections();
+  let collections = GetCollections();
+  let translation = GetTranslation(component, globalLanguage.value);
 
-
-    return(
-        <div class='Collections'>
-            <h1 className='CollectionsTitle'>Collections:</h1>
-            {collections.map((collection) => {
-                return <CollectionButton>{collection}</CollectionButton>
-            })}
-            <div className='RowFlex'>
-                <div className='optionAbout' onClick={() => props.onChange({type: 'GetBack', value: 'MENU'})}>Previous Page</div>
-                <div className='optionAbout'>Contact Us</div>
-            </div>
-        </div>
-    )
+  return (
+    <div class="Collections">
+      <ContentTitle
+        onChange={props.onChange}
+        title={translation.title}
+      ></ContentTitle>
+      <div className='Collections'>
+        {collections.map((collection) => {
+          return <CollectionButton>{collection}</CollectionButton>;
+        })}
+      </div>
+    </div>
+  );
 }

@@ -1,0 +1,13 @@
+.ContentTitleIcon{
+    height: 60px;
+    fill: var(--mainColor);
+}
+.ContentTitleIcon:hover{
+    cursor: pointer;
+    fill: var(--hoverColor);
+}
+
+.ContentTitle{
+    color:white;
+    font-family: var(--font-family);
+}
