@@ -68,7 +68,7 @@ export function GetTranslation(component, language){
                             collections: 'KOLLEKTÁCIÓK'
                         }
                     case 'SEARCHBAR': return{placeHolder:'Keress valamit itt...'};
-                    case 'LOGIN': 
+                case 'LOGIN': 
                     return {
                     emailLogin:'email or login',
                     emailPlaceHolder: 'email address',
@@ -94,7 +94,26 @@ export function GetTranslation(component, language){
                     shipRet: 'Shipping&Returns',
                     faq: 'FAQ'
                     }
-                    default: return;
+                case 'COLLECTIONS':
+                    return{
+                        title: 'Collections:',
+                        previous: 'Previous page',
+                        contact: 'Contact us'
+                    }
+                case 'ABOUT':
+                    return{
+                        description:   'Some description',
+                        previous: 'Previous page',
+                        contact: 'Contact us',
+                        title: 'About us'
+                    }
+                case 'PRODUCTS':
+                    return{
+                        title: 'Products',
+                        previous: 'Previous page',
+                        contact: 'Contact us'
+                    }
+                default: return;
     
                 }
 

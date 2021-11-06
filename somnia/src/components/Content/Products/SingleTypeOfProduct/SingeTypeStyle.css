@@ -23,3 +23,15 @@
     font-family: var(--fontFamily);
     font-weight: lighter;
 }
+
+.Arrow{
+    fill:var(--mainColor);
+    height: 20px;
+    cursor: pointer;
+}
+.Arrow:hover{
+    fill:var(--hoverColor);
+}
+.Arrow.Back{
+    transform:rotate(180deg);
+}
