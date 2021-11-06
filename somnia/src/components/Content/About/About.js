@@ -4,17 +4,18 @@ import logo from "../../../images/Logo/Somnialogo1.png";
 import { GetTranslation } from "../../../public/Dictionary.js";
 import { UseLanguageContext } from "../../../globalContext/context/LanguageContext";
 import ContentTitle from "../ContentTitle/ContentTitle.js";
+import { UseActiveContentContext } from "../../../globalContext/context/ActiveContentContext";
 
 export default function About(props) {
+  const ActiveContent = UseActiveContentContext();
   const component = "About";
-  const title = "About us";
   const globalLanguage = UseLanguageContext();
 
   const translation = GetTranslation(component, globalLanguage.value);
 
   return (
     <div className="About">
-      <img src={logo} className="LogoAbout"></img>
+      <img src={logo} className="LogoAbout" alt='Somnia Logo' ></img>
       <ContentTitle
         onChange={props.onChange}
         title={translation.title}

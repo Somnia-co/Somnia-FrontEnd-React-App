@@ -25,11 +25,10 @@ function Header(props) {
   }, [globalLanguage.value]);
 
 
-  let leftSide = <Collection></Collection>;
-  if (props.search == true) leftSide = <Search></Search>;
+  let leftSide = <Search></Search>;
 
   return (
-    <header lan={props.lan} className="header">
+    <header className="header">
       {leftSide}
       <div class="RowFlex">
         <div class="RowFlex lan">
@@ -41,7 +40,7 @@ function Header(props) {
             EN
           </p>
         </div>
-        <Login SetLoginAttempt={props.onChange} loginVisible={false}></Login>
+        <Login></Login>
       </div>
     </header>
   );

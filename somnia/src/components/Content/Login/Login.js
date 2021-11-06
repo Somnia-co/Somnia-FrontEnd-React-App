@@ -3,27 +3,29 @@ import './Login.css';
 import logo from '../../../images/Logo/Somnialogo1.png';
 import {GetTranslation} from '../../../public/Dictionary.js';
 import { UseLanguageContext } from "../../../globalContext/context/LanguageContext";
+import {UseActiveContentContext} from "../../../globalContext/context/ActiveContentContext"
 
 
 export default function Login(props){
 
     const globalLanguage = UseLanguageContext();
-    const transaltion = GetTranslation('Login',globalLanguage.value);
+    const ActiveContent = UseActiveContentContext();
+    const translation = GetTranslation('Login',globalLanguage.value);
     return(
         <div className='LoginForm'>
             <img className='LoginLogo' src={logo} alt='Login Somnia logo'></img>
 
-            <label class='LoginLabel'>{transaltion.emailLogin}</label>
-            <input class='LoginInput' type='text' placeholder={transaltion.emailPlaceHolder} name='loginOrPassword'></input>
+            <label class='LoginLabel'>{translation.emailLogin}</label>
+            <input class='LoginInput' type='text' placeholder={translation.emailPlaceHolder} name='loginOrPassword'></input>
 
-            <label class='LoginLabel'>{transaltion.password}</label>
-            <input class='LoginInput' type='password' placeholder={transaltion.password} name='password'></input>
+            <label class='LoginLabel'>{translation.password}</label>
+            <input class='LoginInput' type='password' placeholder={translation.password} name='password'></input>
 
-            <h3 onClick={() => props.onChange({type:'MenuItemChoosen',value: 'REGISTER'})}>{transaltion.noAccount}</h3>
+            <h3 onClick={() => {ActiveContent.HandleChange('Register')}}>{translation.noAccount}</h3>
 
             <div className='RowFlex'>
-                <div className='optionAbout' onClick={() => props.onChange({type: 'GetBack', value: 'MENU'})}>{transaltion.cancel}</div>
-                <div className='optionAbout'>{transaltion.login}</div>
+                <div className='optionAbout' onClick={() => ActiveContent.HandleChange('MENU')}>{translation.cancel}</div>
+                <div className='optionAbout'>{translation.login}</div>
             </div>
         </div>
     )

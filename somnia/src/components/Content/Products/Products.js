@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import "./Products.css";
 import { GetTranslation } from "../../../public/Dictionary.js";
 import { UseLanguageContext } from "../../../globalContext/context/LanguageContext";
@@ -7,7 +7,6 @@ import SingleType from "./SingleTypeOfProduct/SingleTypeOfProduct.js";
 import ContentTitle from "../ContentTitle/ContentTitle.js";
 
 export default function Products(props) {
-
   const [CurrentlyShownProducts, SetCurrentlyShwownProducts] = useState();
   const component = "Products";
   const globalLanguage = UseLanguageContext();
@@ -17,13 +16,16 @@ export default function Products(props) {
 
   return (
     <div class="Collections">
-      <ContentTitle onChange={props.onChange} title={translation.title}></ContentTitle>
+      <ContentTitle
+        onChange={props.onChange}
+        title={translation.title}
+      ></ContentTitle>
       <div className="Products">
         {products.map((product) => {
           return (
             <SingleType
               type={product.type}
-              products = {product.products}
+              products={product.products}
             ></SingleType>
           );
         })}

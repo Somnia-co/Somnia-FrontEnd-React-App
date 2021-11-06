@@ -3,8 +3,10 @@ import "./Register.css";
 import logo from "../../../images/Logo/Somnialogo1.png";
 import {GetTranslation} from '../../../public/Dictionary.js';
 import { UseLanguageContext } from "../../../globalContext/context/LanguageContext";
+import {UseActiveContentContext} from "../../../globalContext/context/ActiveContentContext"
 
 export default function Register(props) {
+  const ActiveContent = UseActiveContentContext();
   const globalLanguage = UseLanguageContext();
   const transaltion = GetTranslation('register',globalLanguage.value);
 
@@ -39,7 +41,7 @@ export default function Register(props) {
       <div className="RowFlex">
         <div
           className="optionAbout"
-          onClick={() => props.onChange({ type: "GetBack", value: "LOGIN" })}
+          onClick={() => ActiveContent.HandleChange('Login')}
         >
           {transaltion.cancel}
         </div>

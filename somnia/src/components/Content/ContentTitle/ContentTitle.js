@@ -1,11 +1,15 @@
 import React from "react";
 import './ContentTitle.css';
+import {UseActiveContentContext} from '../../../globalContext/context/ActiveContentContext'
 
 export default function ContentTitle(props){
+
+    const ActiveContext = UseActiveContentContext();
+
     return(
         <div className='RowFlex'>
         <svg
-          onClick={() => props.onChange({type: 'GetBack', value: 'MENU'})}
+          onClick={() => ActiveContext.HandleChange('MENU')}
           className='ContentTitleIcon'
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"

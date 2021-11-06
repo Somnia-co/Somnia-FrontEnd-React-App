@@ -1,26 +1,29 @@
 import React, { useState,useEffect } from "react";
 import "./Login.css";
+import {UseActiveContentContext} from '../../../globalContext/context/ActiveContentContext'
 
 export default function Login(props) {
-  const [LoginTry, SetLoginTry] = useState(false);
-
-  function LoginAttempt() {
-    // const loginIcon = document.getElementById("LoginIcon");
-    // loginIcon.classList.add("Hidden");
-    SetLoginTry(true);
-    props.SetLoginAttempt({ type: "Login", value: true });
-  }
+  
+  let ActiveContent = UseActiveContentContext()
 
   useEffect(()=>{
-    const loginIcon = document.getElementById("LoginIcon");
-    loginIcon.classList.remove("Hidden");
-  })
+    
+    if(ActiveContent.value === 'LOGIN' || ActiveContent.value === 'REGISTER')
+    {
+      const loginIcon = document.getElementById("LoginIcon");
+      loginIcon.classList.add("Hidden");
+    }
+    else{
+      const loginIcon = document.getElementById("LoginIcon");
+      loginIcon.classList.remove("Hidden");
+    }
+  },[ActiveContent.value])
   return (
     <div>
       <svg
         class="loginIcon"
         id="LoginIcon"
-        onClick={() => LoginAttempt()}
+        onClick={() => ActiveContent.HandleChange('LOGIN')}
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
         fill-rule="evenodd"
