@@ -5,9 +5,10 @@ export function LanguageContextProvider(props){
 
     const [language, SetLanguage] = useState('EN');
 
-    function toggleLanguage(){
+    function toggleLanguage(lang){
         if(language === 'EN') SetLanguage('HU');
-        else SetLanguage('EN');
+        //else SetLanguage('EN');
+        //else if(language === 'HU') SetLanguage('EN');
     }
     let lanContextValue={value: language, HandleLanChange: toggleLanguage}
     //we can insert some code that calculates and changes the value here
