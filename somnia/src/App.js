@@ -12,7 +12,7 @@ export default function App() {
   const [ActiveContent, SetActiveContent] = useState("MENU");
 
   //it's simillar to ComponentDidMount, so it's envoked every
-  //time state hanges
+  //time state changes
   useEffect(() => {
     document.title = "Somnia";
   });
