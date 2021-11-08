@@ -32,11 +32,11 @@ function Header(props) {
       {leftSide}
       <div class="RowFlex">
         <div class="RowFlex lan">
-          <p className="lan option" id="HU" onClick={() => globalLanguage.HandleLanChange()}>
+          <p className="lan option" id="HU" onClick={() => globalLanguage.HandleLanChange('HU')}>
             HU
           </p>
           <p className="lan">/</p>
-          <p className="lan option" id="EN" onClick={() => globalLanguage.HandleLanChange()}>
+          <p className="lan option" id="EN" onClick={() => globalLanguage.HandleLanChange('EN')}>
             EN
           </p>
         </div>

@@ -63,55 +63,55 @@ export function GetTranslation(component, language){
                 switch(component.toString().toUpperCase()){
                     case 'MAINMENU':
                         return {
-                            about: 'Rólunk',
+                            about: 'RÓLUNK',
                             products: 'TERMÉKEK',
-                            collections: 'KOLLEKTÁCIÓK'
+                            collections: 'KOLLEKCIÓK'
                         }
                     case 'SEARCHBAR': return{placeHolder:'Keress valamit itt...'};
                 case 'LOGIN': 
                     return {
-                    emailLogin:'email or login',
-                    emailPlaceHolder: 'email address',
-                    password: 'password',
-                    noAccount: "Don't have account yet? Sign up here...",
-                    cancel: 'cancel',
-                    login: 'login'
+                    emailLogin:'felhasználónév',
+                    emailPlaceHolder: 'email cím',
+                    password: 'jelszó',
+                    noAccount: "Nincs még fiókod? Regisztrálj itt!",
+                    cancel: 'mégsem',
+                    login: 'bejelentkezés'
                 }
                 case 'REGISTER':
                     return{
-                    emailLogin:'email or login',
-                    email: 'email address',
-                    password: 'password',
-                    passwordAgain: 'password again',
-                    cancel: 'cancel',
-                    register: 'register'
+                    emailLogin:'felhasználónév',
+                    email: 'email cím',
+                    password: 'jelszó',
+                    passwordAgain: 'jelszó újra',
+                    cancel: 'mégsem',
+                    register: 'regisztráció'
                     }
                 case 'FOOTER':
                     return{
-                    contact:'Contact us',
-                    terms: 'Terms and conditions',
-                    privacy: 'Privacy Policy',
-                    shipRet: 'Shipping&Returns',
-                    faq: 'FAQ'
+                    contact:'Kapcsolat',
+                    terms: 'Feltételek',
+                    privacy: 'Adatkezelési nyilatkozat',
+                    shipRet: 'Szállítás és visszaküldés',
+                    faq: 'GYIK'
                     }
                 case 'COLLECTIONS':
                     return{
-                        title: 'Collections:',
-                        previous: 'Previous page',
-                        contact: 'Contact us'
+                        title: 'Kollekciók:',
+                        previous: 'Előző oldal',
+                        contact: 'Kapcsolat'
                     }
                 case 'ABOUT':
                     return{
                         description:   'Some description',
-                        previous: 'Previous page',
-                        contact: 'Contact us',
-                        title: 'About us'
+                        previous: 'Előző oldal',
+                        contact: 'Kapcsolat',
+                        title: 'Rólunk'
                     }
                 case 'PRODUCTS':
                     return{
-                        title: 'Products',
-                        previous: 'Previous page',
-                        contact: 'Contact us'
+                        title: 'Termékek',
+                        previous: 'Előző oldal',
+                        contact: 'Kapcsolat'
                     }
                 default: return;
     

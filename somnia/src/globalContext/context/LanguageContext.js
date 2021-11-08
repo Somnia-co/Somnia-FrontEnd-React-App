@@ -6,7 +6,7 @@ export function LanguageContextProvider(props){
     const [language, SetLanguage] = useState('EN');
 
     function toggleLanguage(lang){
-        if(language === 'EN') SetLanguage('HU');
+        if(!(language === lang)) SetLanguage(lang);
         //else SetLanguage('EN');
         //else if(language === 'HU') SetLanguage('EN');
     }
