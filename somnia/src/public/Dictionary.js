@@ -44,7 +44,7 @@ export function GetTranslation(component, language){
                     }
                 case 'ABOUT':
                     return{
-                        description:   'Some description',
+                        description:   'Some description dsadasda desc',
                         previous: 'Previous page',
                         contact: 'Contact us',
                         title: 'About us'

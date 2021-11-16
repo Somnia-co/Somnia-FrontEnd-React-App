@@ -6,6 +6,7 @@ export function GetCollections(){
     let collections = [];
     collections.push('Season I');
     collections.push('Season II');
+    collections.push('Collection Almeria Fashion');
 
     return collections; 
 }
