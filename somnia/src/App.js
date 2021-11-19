@@ -43,6 +43,7 @@ export default function App() {
     <ActiveContentProvider>
       <LanguageContextProvider>
         <div className="App">
+          <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet" />
           <Header search={search} onChange={handleChange}></Header>
           <Content
             activeContent={ActiveContent}

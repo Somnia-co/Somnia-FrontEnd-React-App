@@ -1,14 +1,16 @@
 import React, { useEffect, useRef } from "react";
 import "./Header.css";
-import logo from "../../images/Logo/Somnialogo1.png";
+//import logo from "../../images/Logo/Somnialogo1.png";
 import Search from "./Search/Search";
-import Collection from "./Collection/Collection";
+//import Collection from "./Collection/Collection";
 import Login from "./Login/Login";
 import { UseLanguageContext } from "../../globalContext/context/LanguageContext";
+import {UseActiveContentContext} from "../../globalContext/context/ActiveContentContext";
 
 function Header(props) {
   
   const globalLanguage = UseLanguageContext();
+  const ActiveContent = UseActiveContentContext();
 
   useEffect(() => {
 
@@ -25,7 +27,7 @@ function Header(props) {
   }, [globalLanguage.value]);
 
 
-  let leftSide = <Search></Search>;
+  let leftSide = <Search />;
 
   return (
     <header className="header">
@@ -40,7 +42,8 @@ function Header(props) {
             EN
           </p>
         </div>
-        <Login></Login>
+        <div onClick={() => ActiveContent.HandleChange('Admin')}> <button>Admin site</button> </div>
+        <Login />
       </div>
     </header>
   );

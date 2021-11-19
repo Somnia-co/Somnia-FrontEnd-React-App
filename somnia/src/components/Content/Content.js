@@ -12,6 +12,7 @@ import Terms from "./Terms/Terms";
 import Privacy from "./Privacy/Privacy";
 import ShipRet from "./ShippingReturns/ShipRet";
 import { UseActiveContentContext } from "../../globalContext/context/ActiveContentContext";
+import Admin from "./Admin/Admin";
 
 function Content(props) {
   const ActiveContentContext = UseActiveContentContext();
@@ -41,6 +42,8 @@ function Content(props) {
         return <Privacy></Privacy>;
       case "SHIPRET":
         return <ShipRet></ShipRet>;
+        case "ADMIN":
+          return <Admin />;
       default:
         console.log("default");
         break;
