@@ -20,6 +20,10 @@ export default function Products(props) {
         onChange={props.onChange}
         title={translation.title}
       ></ContentTitle>
+      <div class='Filters'>
+        <h3>Price: </h3>
+        <h3>Collection: </h3>
+      </div>
       <div className="Products">
         {products.map((product) => {
           return (

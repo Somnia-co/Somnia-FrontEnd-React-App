@@ -4,3 +4,11 @@
     flex-wrap: wrap;
     justify-content: center;
 }
+.Filters{
+    display: flex;
+    flex-direction: row;
+}
+.Filters h3{
+    color: var(--mainColor);
+    margin: 20px;
+}

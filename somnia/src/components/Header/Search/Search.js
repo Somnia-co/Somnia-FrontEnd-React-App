@@ -1,10 +1,24 @@
 import React, { useEffect, useRef, useContext } from "react";
 import "./Search.css";
 import { UseLanguageContext } from "../../../globalContext/context/LanguageContext";
-import {GetTranslation} from '../../../public/Dictionary.js'
+import {GetTranslation} from '../../../public/Dictionary.js';
+import {UseActiveContentContext} from "../../../globalContext/context/ActiveContentContext";
 
 
 function Search(props) {
+
+  let ActiveContent = UseActiveContentContext();
+  function Search(){
+    let searchButton = document.getElementById('SearchIcon');
+    searchButton.addEventListener('click',function(){
+        let inputField = document.getElementById('SearchInput');
+        if(inputField){
+          let searchQuery = inputField.value;
+          ActiveContent.HandleChange('Products', searchQuery);
+        }
+    })
+  }
+
   const [ActiveSearch, SetActiveSearch] = React.useState(false);
 
   const globalLanguage = UseLanguageContext();
@@ -38,6 +52,7 @@ function Search(props) {
           class="SearchInput Hidden"
           id="SearchInput"
           type="text"
+          onChange={() => Search()}
           placeholder={translation.placeHolder.toString()}
         ></input>
         <svg
