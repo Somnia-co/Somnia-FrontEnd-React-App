@@ -8,3 +8,18 @@
 .TermsContent p{
     color:white;
 }
+.TermsAndConditions{
+    display:flex;
+    align-items: center;
+    margin: 30px;
+}
+.TermsAndConditions:hover{
+    cursor: pointer;
+}
+.TermsAndConditions svg{
+    fill: var(--mainColor);
+    width: 50px;
+}
+.TermsAndConditions svg:hover{
+    fill:var(--hoverColor);
+}
