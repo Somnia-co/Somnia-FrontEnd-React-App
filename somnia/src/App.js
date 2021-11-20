@@ -43,12 +43,14 @@ export default function App() {
     <ActiveContentProvider>
       <LanguageContextProvider>
         <div className="App">
-          <Header search={search} onChange={handleChange}></Header>
-          <Content
-            activeContent={ActiveContent}
-            onChange={handleChange}
-          ></Content>
-          <Footer></Footer>
+          <div className="content-wrapper">
+            <Header search={search} onChange={handleChange}></Header>
+            <Content
+              activeContent={ActiveContent}
+              onChange={handleChange}
+            ></Content>
+            <Footer></Footer>
+          </div>
         </div>
       </LanguageContextProvider>
     </ActiveContentProvider>

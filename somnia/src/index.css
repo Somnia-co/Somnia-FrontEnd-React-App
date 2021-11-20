@@ -9,7 +9,7 @@
   --footerHeight: 6vh;
   --headerHeight: 6vh;
   --headerMargin: 10px;
-   --contentHeight: calc(100vh - var(--foterHeight) - var(--headerHeight) - var(--headerMargin)); 
+  --contentHeight: calc(100vh - var(--foterHeight) - var(--headerHeight) - var(--headerMargin)); 
   
 
 
@@ -46,4 +46,9 @@ code {
 h1{
   font-size: 8vh;
   font-family: var(--fontFamily);
+}
+
+.App{
+  position: relative;
+  min-height: 100vh;
 }

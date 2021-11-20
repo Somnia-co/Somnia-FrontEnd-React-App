@@ -1,10 +1,10 @@
 import React from "react";
 import "./About.css";
-import logo from "../../../images/Logo/Somnialogo1.png";
-import { GetTranslation } from "../../../public/Dictionary.js";
-import { UseLanguageContext } from "../../../globalContext/context/LanguageContext";
+import logo from "../../../../images/Logo/Somnialogo1.png";
+import { GetTranslation } from "../../../../public/Dictionary.js";
+import { UseLanguageContext } from "../../../../globalContext/context/LanguageContext";
 import ContentTitle from "../ContentTitle/ContentTitle.js";
-import { UseActiveContentContext } from "../../../globalContext/context/ActiveContentContext";
+import { UseActiveContentContext } from "../../../../globalContext/context/ActiveContentContext";
 
 export default function About(props) {
   const ActiveContent = UseActiveContentContext();

@@ -30,8 +30,8 @@ function Header(props) {
   return (
     <header className="header">
       {leftSide}
-      <div class="RowFlex">
-        <div class="RowFlex lan">
+      <div className="RowFlex">
+        <div className="RowFlex lan">
           <p className="lan option" id="HU" onClick={() => globalLanguage.HandleLanChange('HU')}>
             HU
           </p>

@@ -1,10 +1,14 @@
 .Footer{
     height: var(--footerHeight);
-    border-top: solid 2px var(--mainColor);
+    border-top: 2px solid var(--mainColor);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 10px;
+    padding: 0vw 3vw 0vw 3vw;
+    
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 .FooterText{
