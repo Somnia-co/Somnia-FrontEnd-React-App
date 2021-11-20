@@ -1,4 +1,49 @@
 .ContactUs{
     display:flex;
     flex-direction:column;
+    align-items: center;
+}
+
+.Message{
+    height: 150px;
+    width: 500px;
+}
+.EmailInput{
+    height:30px;
+    width: 500px;
+}
+
+.ContactForm{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+.ContactForm label{
+    color: var(--mainColor);
+    margin-right: 20px;
+    font-size: 20px;
+    font-family: var(--fontFamily);
+}
+.SendButton{
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 15px;
+    color:var(--mainColor);
+    border: 2px solid var(--mainColor);
+    padding-left: 10px;
+}
+.SendButton:hover{
+    color: var(--hoverColor);
+    border: 2px solid var(--hoverColor);
+}
+.SendButton svg{
+    fill: var(--mainColor);
+    margin: 10px;
+}
+
+.ContactTitle{
+    display: flex;
+    flex-direction: row;
 }
