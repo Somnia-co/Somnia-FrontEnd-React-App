@@ -23,6 +23,7 @@
     color:white;
     font-family: var(--font-family);
     margin: 0;
+    font-size: 4rem;
 }
 .ContentTitleDiv{
     display:flex;

@@ -13,13 +13,15 @@ export default function Question(props) {
 
   return (
     <div className="question">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-        <path d="M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z" />
-      </svg>
-      <h2 onClick={() => ShowAnswer()} id={questionID}>{props.question}</h2>
-      <h2 id={answerID} className="Hidden">
-        {props.answer}
-      </h2>
+      <div className="question_wrapper">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z" />
+        </svg>
+        <h2 onClick={() => ShowAnswer()} id={questionID}>{props.question}</h2>
+      </div>
+      <h3 id={answerID} className="Hidden">
+        {props.answer}  
+      </h3>    
     </div>
   );
 }

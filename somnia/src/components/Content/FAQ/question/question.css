@@ -1,0 +1,31 @@
+.question{
+    display:flex;
+    flex-direction: column;
+    cursor:pointer;
+    margin-top: 1rem;
+}
+.question h2{
+    color:white;
+    margin: 0rem 0rem 0.2rem 0.5rem;
+    font-size: 1.6rem;
+}
+.question h3{
+    color: #dddddd;
+    margin: 0rem 0rem 0rem 1.8rem;
+    font-size: 1rem;
+    font-weight: lighter;
+}
+.question h2:hover{
+    color: var(--hoverColor);
+}
+.question svg{
+    fill: var(--mainColor);
+    width: 1rem;
+}
+.question_wrapper{
+    display: flex;
+    flex-direction: row;
+}
+.Hidden{
+    display: none;
+}

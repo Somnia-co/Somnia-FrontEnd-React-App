@@ -1,7 +1,7 @@
 import React from "react";
 import './FAQ.css';
 import ContentTitle from '../ContentTitle/ContentTitle';
-import Question from './guestion/question';
+import Question from './question/question';
 
 
 export default function FAQ(props){
