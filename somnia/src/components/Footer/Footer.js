@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../../images/Logo/Somnialogo1.png';
+//import logo from '../../images/Logo/Somnialogo1.png';
 import './Footer.css';
 import {GetTranslation} from '../../public/Dictionary.js';
 import { UseLanguageContext } from "../../globalContext/context/LanguageContext";

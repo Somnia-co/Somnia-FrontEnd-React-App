@@ -6,7 +6,7 @@
   --elementActiveColor: silver;
   --transitionDuration: .2s;
   --fontFamily: 'Roboto', sans-serif;
-  --foterHeight: 6vh;
+  --footerHeight: 6vh;
   --headerHeight: 6vh;
   --headerMargin: 10px;
    --contentHeight: calc(100vh - var(--foterHeight) - var(--headerHeight) - var(--headerMargin)); 

@@ -1,5 +1,5 @@
 .Footer{
-    height: var(--foterHeight);
+    height: var(--footerHeight);
     border-top: solid 2px var(--mainColor);
     display: flex;
     align-items: center;
