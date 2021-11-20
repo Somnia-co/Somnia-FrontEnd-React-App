@@ -9,3 +9,18 @@
     color:white;
     font-family: var(--font-family);
 }
+.Shipping{
+    display:flex;
+    align-items: center;
+    margin: 30px;
+}
+.Shipping:hover{
+    cursor: pointer;
+}
+.Shipping svg{
+    fill: var(--mainColor);
+    width: 50px;
+}
+.Shipping svg:hover{
+    fill:var(--hoverColor);
+}
