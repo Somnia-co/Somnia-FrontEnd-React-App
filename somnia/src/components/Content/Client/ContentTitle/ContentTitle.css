@@ -1,0 +1,33 @@
+.ContentTitleIcon{
+    fill: var(--mainColor);
+    width: 80px;
+}
+.ContentTitleIcon:hover{
+    cursor: pointer;
+    fill: var(--hoverColor);
+    animation: BackArrowMove 3s infinite;
+}
+
+@keyframes BackArrowMove{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(20px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+.ContentTitle{
+    color:white;
+    font-family: var(--font-family);
+    margin: 0;
+    font-size: 4rem;
+}
+.ContentTitleDiv{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}

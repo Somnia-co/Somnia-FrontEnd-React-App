@@ -1,20 +1,23 @@
 .Footer{
-    height: var(--foterHeight);
-    border-top: solid 2px var(--mainColor);
+    height: var(--footerHeight);
+    border-top: 2px solid var(--mainColor);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 10px;
+    
+    position: absolute;
+    bottom: 0;
+    width: 96vw;
+    padding: 0vw 2vw 0vw 2vw;
 }
 
 .FooterText{
     color:var(--mainColor);
-    font-size: 12px;
+    font-size: 0.7rem;
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 20px;
-
+    gap: 1rem;
 }
 
 .FooterText p:hover{
@@ -23,7 +26,7 @@
 }
 .FooterSvg{
     fill: var(--mainColor);
-    height: 15px;
+    height: 1.5em;
 }
 .FooterSvg:hover{
     fill: var(--hoverColor);

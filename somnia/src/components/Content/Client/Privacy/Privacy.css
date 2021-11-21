@@ -1,0 +1,25 @@
+.PrivacyContent{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+.PrivacyContent p{
+    color:white;
+    font-family: var(--fontFamily);
+}
+.Privacy{
+    display:flex;
+    align-items: center;
+    margin: 30px;
+}
+.Privacy:hover{
+    cursor: pointer;
+}
+.Privacy svg{
+    fill: var(--mainColor);
+    width: 50px;
+}
+.Privacy svg:hover{
+    fill:var(--hoverColor);
+}
