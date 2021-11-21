@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./Sidenav.css";
 import Button from "./Button";
-import Feedback from "../Feedback/Feedback";
 
 function Sidenav(props) {
   const [isHidden, setIsHidden] = useState(false);

@@ -55,7 +55,14 @@ function Content(props) {
     }
   }
 
-  return <div className="Content">{ActiveContent}</div>;
+  return (
+    <div className="Content">
+      {/* <video autoplay muted loop id="myVideo">
+        <source src="rain.mp4" type="video/mp4" />
+      </video> */}
+      {ActiveContent}
+    </div>
+  );
 }
 
 export default Content;

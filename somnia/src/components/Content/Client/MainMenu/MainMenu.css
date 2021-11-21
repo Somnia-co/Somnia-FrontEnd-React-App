@@ -1,26 +1,27 @@
-.MainMenu{
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
+.MainMenu {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
 }
 
-.MainMenuLogo{
-    width: var(--MainMenuLogoHeight);
+.MainMenuLogo {
+  width: var(--MainMenuLogoHeight);
 }
 
-.MenuItem{
-    color: var(--mainColor);
-    margin: var(--MainMenuItemsMargin);
+.MenuItem {
+  color: var(--mainColor);
+  margin: var(--MainMenuItemsMargin);
 }
 
-h1.MenuItem{
-    cursor: pointer;
+h1.MenuItem {
+  cursor: pointer;
 }
-h1.MenuItem:hover{
-    color:var(--hoverColor);
+h1.MenuItem:hover {
+  color: var(--hoverColor);
 }
-h1.MainItem:active{
-    color:var(--elementActiveColor);
+h1.MainItem:active {
+  color: var(--elementActiveColor);
 }
