@@ -1,41 +1,57 @@
-h1{
-    color: white;
+h1 {
+  color: white;
 }
 
-.rowFlex{
-    display: flex; 
-    flex-direction: row;
+.rowFlex {
+  display: flex;
+  flex-direction: row;
 }
 
-.columnFlex{
-    display: flex;
-    flex-direction: column;
+.columnFlex {
+  display: flex;
+  flex-direction: column;
 }
 
-
-#Admin{
-    height: var(--contentHeight);
-    width: 100%;
+#Admin {
+  height: var(--contentHeight);
+  width: 100%;
+  background-color: #0a0a0a;
 }
 
-#Sidenav{
-    width: 40vw;
-    height: inherit;
-    float: left;
-    min-width: 200px;
-    background-color: #111111;
-    padding: 0;
-    margin: 0;
-    border: 0;
+menu {
+  height: inherit;
+  float: left;
+
+  padding: 0;
+  margin: 2rem 0 0 0;
+  border: 0;
+  transition: all 0.5s ease-in-out;
+  overflow: hidden;
+  flex: 1;
 }
 
-#Dashboard{
-    width: 100vw;
-    height: inherit;
-    float: right;
-    min-width: none;
-    background-color: #0A0A0A;
-    padding: 0;
-    margin: 0;
-    padding-left: 1rem;
+#SidenavOpen {
+  display: flex;
+  flex-direction: column;
+  background-color: #111111;
+}
+
+#SidenavClosed {
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+}
+
+#Dashboard,
+#Feedback,
+#ProdMgmt,
+#Collections {
+  width: 100vw;
+  height: inherit;
+  float: right;
+  min-width: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  padding-left: 1rem;
 }

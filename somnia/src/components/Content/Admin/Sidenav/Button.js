@@ -1,28 +1,44 @@
-import React from 'react';
+import React from "react";
 //import menuButton from "../../../../images/Arrow/back.png";
+import Feedback from "../Feedback/Feedback";
+import Dashboard from "../Dashboard/Dashboard";
+import ProductManagement from "../ProductManagement/ProductManagement";
+import Collections from "../Collections/Collections";
 
-function Button(props){
+function Button(props) {
+  let button;
 
+  const pages = {
+    dashboard: "DASHBOARD",
+    feedback: "FEEDBACK",
+    collections: "COLLECTIONS",
+    prodmgmt: "PRODUCT MANAGEMENT",
+  };
 
-
-    /*
-    if(props.imgPath !== ""){
-        return (
-            <input type="image" src={menuButton} alt="" className={props.className}></input>
-        );
-    }
-    else{
-    */
-        return (
-            <button className="rowFlex" onClick="">
-                <span className={"material-icons-round " + props.alignIcon}>{props.icon}</span>
-                <div className={props.alignText}>{props.text}</div>
-            </button>
-        );
-    /*
-    }
-    */
-    
+  switch (props.text.toUpperCase()) {
+    case pages.feedback:
+      button = <Feedback />;
+      break;
+    case pages.dashboard:
+      button = <Dashboard />;
+      break;
+    case pages.prodmgmt:
+      button = <ProductManagement />;
+      break;
+    case pages.collections:
+      button = <Collections />;
+      break;
+    default:
+      <Dashboard />;
+  }
+  return (
+    <button onClick={() => props.onChange(button)} className="rowFlex">
+      <span className={"material-icons-round " + props.alignIcon}>
+        {props.icon}
+      </span>
+      <div className={props.alignText}>{props.text}</div>
+    </button>
+  );
 }
 
 export default Button;

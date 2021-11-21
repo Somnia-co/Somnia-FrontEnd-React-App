@@ -1,66 +1,76 @@
-Button{
-    background-color: transparent;
-    border: 2px solid grey;
-    border-radius: 5px;
-    color: white;
-    padding: 0.2rem;
-    margin-bottom: 0.5rem;
+Button {
+  background-color: transparent;
+  border: 2px solid grey;
+  border-radius: 5px;
+  color: white;
+  padding: 0.2rem;
+  margin-bottom: 0.5rem;
+  max-width: 100%;
+  cursor: pointer;
 }
 
-/*.btn{
-    width: 5vh;
-    height: 5vh;
-    margin-left: auto;
-    margin-right: 0;
-}*/
-
-.top{
-    padding: 2% 5% 2% 5%;
-    height: 5%;
-    
+.top {
+  padding: 2% 5% 2% 5%;
+  height: 5%;
 }
 
-.middle{
-    padding: 2% 5% 2% 5%;
-    height: 85%;
+.middle {
+  padding: 2% 5% 2% 5%;
+  height: 85%;
 }
 
-.bottom{
-    padding: 2% 5% 2% 5%;
-    height: 10%;
+.bottom {
+  padding: 2% 5% 2% 5%;
+  height: 10%;
 }
 
-.menuIcon{
-    color: white;
-    width: 5vh;
-    height: 5vh;
-    margin-left: auto;
-    margin-right: 0;
+.menuIcon {
+  color: white;
+  width: 5vh;
+  height: 5vh;
+  margin-left: auto;
+  margin-right: 0;
+  cursor: pointer;
+  border: 0;
 }
 
-.profile{
-    width: 100%;
-    height: 100%;
-    padding: 0;
-    margin: 0;
+.profile {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
 }
 
-.align-left{
-    margin-left: 0;
-    margin-right: 0.5rem;
+.align-left {
+  margin-left: 0;
+  margin-right: 0.5rem;
 }
 
-.align-right{
-    margin-left: auto;
-    margin-right: 0;
+.align-right {
+  margin-left: auto;
+  margin-right: 0;
 }
 
-.align-center{
-    margin-left: auto;
-    margin-right: auto;
+.align-center {
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.align-v-center{
-    margin-top: auto;
-    margin-bottom: auto;
+.align-v-center {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.closedMenu {
+  width: 0;
+}
+
+.openMenu {
+  width: 20vw;
+}
+
+@media (max-width: 720px) {
+  .openMenu {
+    width: 60vw;
+  }
 }

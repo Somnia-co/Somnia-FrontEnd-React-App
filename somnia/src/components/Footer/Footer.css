@@ -1,34 +1,39 @@
-.Footer{
-    height: var(--footerHeight);
-    border-top: 2px solid var(--mainColor);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    
-    position: absolute;
-    bottom: 0;
-    width: 96vw;
-    padding: 0vw 2vw 0vw 2vw;
+.Footer {
+  height: var(--footerHeight);
+  border-top: 2px solid var(--mainColor);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 96vw;
+  padding: 0vw 2vw 0vw 2vw;
 }
 
-.FooterText{
-    color:var(--mainColor);
-    font-size: 0.7rem;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 1rem;
+.FooterText {
+  color: var(--mainColor);
+  font-size: 0.7rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
 }
 
-.FooterText p:hover{
-    color: var(--hoverColor);
-    cursor: pointer;
+.FooterText p:hover {
+  color: var(--hoverColor);
+  cursor: pointer;
 }
-.FooterSvg{
-    fill: var(--mainColor);
-    height: 1.5em;
+.FooterSvg {
+  fill: var(--mainColor);
+  height: 1.5em;
 }
-.FooterSvg:hover{
-    fill: var(--hoverColor);
-    cursor: pointer;
+.FooterSvg:hover {
+  fill: var(--hoverColor);
+  cursor: pointer;
+}
+
+@media (max-width: 720px) {
+  .Footer,
+  .FooterText {
+    flex-direction: column;
+  }
 }
