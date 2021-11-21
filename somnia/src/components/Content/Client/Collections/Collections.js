@@ -1,10 +1,10 @@
 import React from "react";
 import "./Collections.css";
-import { GetCollections } from "../../../public/CollectionsList";
+import { GetCollections } from "../../../../public/CollectionsList";
 import CollectionButton from "./collection/CollectionButton.js";
-import { GetTranslation } from "../../../public/Dictionary.js";
-import { UseLanguageContext } from "../../../globalContext/context/LanguageContext";
-import {UseActiveContentContext} from '../../../globalContext/context/ActiveContentContext';
+import { GetTranslation } from "../../../../public/Dictionary.js";
+import { UseLanguageContext } from "../../../../globalContext/context/LanguageContext";
+import {UseActiveContentContext} from '../../../../globalContext/context/ActiveContentContext';
 import ContentTitle from "../ContentTitle/ContentTitle";
 
 export default function Collections(props) {

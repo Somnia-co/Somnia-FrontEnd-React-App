@@ -1,6 +1,6 @@
 import React from "react";
 import "./Terms.css";
-import { UseActiveContentContext } from "../../../globalContext/context/ActiveContentContext";
+import { UseActiveContentContext } from "../../../../globalContext/context/ActiveContentContext";
 import ContentTitle from "../ContentTitle/ContentTitle";
 
 export default function Terms(props) {

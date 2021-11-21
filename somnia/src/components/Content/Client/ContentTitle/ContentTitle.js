@@ -1,7 +1,7 @@
 import React from "react";
 import "./ContentTitle.css";
-import { UseActiveContentContext } from "../../../globalContext/context/ActiveContentContext";
-import arrow from "../../../images/Arrow/back.png";
+import { UseActiveContentContext } from "../../../../globalContext/context/ActiveContentContext";
+import arrow from "../../../../images/Arrow/back.png";
 
 export default function ContentTitle(props) {
   const ActiveContext = UseActiveContentContext();
