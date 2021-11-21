@@ -22,6 +22,7 @@ export default function Login(props){
             <input class='LoginInput' type='password' placeholder={translation.password} name='password'></input>
 
             <h3 onClick={() => {ActiveContent.HandleChange('Register')}}>{translation.noAccount}</h3>
+            <div onClick={() => ActiveContent.HandleChange('Admin')}> <button>Admin site</button> </div>
 
             <div className='RowFlex'>
                 <div className='optionAbout' onClick={() => ActiveContent.HandleChange('MENU')}>{translation.cancel}</div>

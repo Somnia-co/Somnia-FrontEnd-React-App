@@ -44,6 +44,7 @@ function Header(props) {
           </p>
         </div>
         <div onClick={() => ActiveContent.HandleChange('Admin')}> <button>Admin site</button> </div>
+        <div onClick={() => ActiveContent.HandleChange('Menu')}> <button>Client site</button> </div>
         <Login></Login>
       </div>
     </header>

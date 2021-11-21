@@ -1,0 +1,66 @@
+Button{
+    background-color: transparent;
+    border: 2px solid grey;
+    border-radius: 5px;
+    color: white;
+    padding: 0.2rem;
+    margin-bottom: 0.5rem;
+}
+
+/*.btn{
+    width: 5vh;
+    height: 5vh;
+    margin-left: auto;
+    margin-right: 0;
+}*/
+
+.top{
+    padding: 2% 5% 2% 5%;
+    height: 5%;
+    
+}
+
+.middle{
+    padding: 2% 5% 2% 5%;
+    height: 85%;
+}
+
+.bottom{
+    padding: 2% 5% 2% 5%;
+    height: 10%;
+}
+
+.menuIcon{
+    color: white;
+    width: 5vh;
+    height: 5vh;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.profile{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.align-left{
+    margin-left: 0;
+    margin-right: 0.5rem;
+}
+
+.align-right{
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.align-center{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.align-v-center{
+    margin-top: auto;
+    margin-bottom: auto;
+}
