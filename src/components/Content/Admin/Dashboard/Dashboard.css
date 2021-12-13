@@ -1,1 +1,5 @@
-
+.CardsWrapper{
+    display:  grid;
+    gap: 1.5rem; /* gap is similar to margin, but you specify it in the parent div, not for each child */
+    grid-template-columns: repeat(3,1fr); /* 3 columns with 1 fraction width each (so equally spaced out) */
+}
