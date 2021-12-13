@@ -1,0 +1,31 @@
+.section{
+    display:flex;
+    flex-direction: column;
+    cursor:pointer;
+    margin-top: 1rem;
+}
+.section h2{
+    color:white;
+    margin: 0rem 0rem 0.2rem 0.5rem;
+    font-size: 1.6rem;
+}
+.section h3{
+    color: #dddddd;
+    margin: 0rem 0rem 0rem 1.8rem;
+    font-size: 1rem;
+    font-weight: lighter;
+}
+.section h2:hover{
+    color: var(--hoverColor);
+}
+/* .title svg{
+    fill: var(--mainColor);
+    width: 1rem;
+} */
+.section_wrapper{
+    display: flex;
+    flex-direction: row;
+}
+.Hidden{
+    display: none;
+}

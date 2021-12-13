@@ -12,7 +12,7 @@ export default function ContentTitle(props) {
         onClick={() => ActiveContext.HandleChange("MENU")}
         className="ContentTitleIcon"
         src={arrow}
-        alt='SomeArrow'
+        alt='Go back button'
       ></img>
 
       <h1 className="ContentTitle">{props.title}</h1>

@@ -4,6 +4,7 @@ import Feedback from "../Feedback/Feedback";
 import Dashboard from "../Dashboard/Dashboard";
 import ProductManagement from "../ProductManagement/ProductManagement";
 import Collections from "../Collections/Collections";
+import ProfileSettings from "../ProfileSettings/ProfileSettings";
 
 function Button(props) {
   let button;
@@ -13,6 +14,7 @@ function Button(props) {
     feedback: "FEEDBACK",
     collections: "COLLECTIONS",
     prodmgmt: "PRODUCT MANAGEMENT",
+    profileSettings: "PROFILE",
   };
 
   switch (props.text.toUpperCase()) {
@@ -27,6 +29,9 @@ function Button(props) {
       break;
     case pages.collections:
       button = <Collections />;
+      break;
+    case pages.profileSettings:
+      button = <ProfileSettings/>;
       break;
     default:
       <Dashboard />;
