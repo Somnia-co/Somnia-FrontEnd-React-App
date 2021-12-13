@@ -9,6 +9,7 @@
 
 p.AboutParagraph{
     color:var(--mainColor);
+    text-align: center;
 }
 .LogoAbout{
     width:var(--MainMenuLogoHeight);

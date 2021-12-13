@@ -44,7 +44,7 @@ export function GetTranslation(component, language){
                     }
                 case 'ABOUT':
                     return{
-                        description:   'Some description dsadasda desc',
+                        description:   'The designers of the Somnia Co. team typically follow the design form and pattern of extravagant, minimalist-style products, thus moving forward with an everyday yet special, youthful fashion line. Return to the main page and take a look at our products!',
                         previous: 'Previous page',
                         contact: 'Contact us',
                         title: 'About us'
@@ -102,9 +102,9 @@ export function GetTranslation(component, language){
                     }
                 case 'ABOUT':
                     return{
-                        description:   'Some description',
+                        description:   'A Somnia Co. csapatának tervezői tipikusan extravagáns, minimalista stílusú termékek tervezési formáját és mintáját követik, ezáltal haladva a mindennapi, de mégis különleges, fiatalos divatvonallal. Térjen vissza a főoldalra, és nézzen szét bátran termékeink között!',
                         previous: 'Előző oldal',
-                        contact: 'Kapcsolat',
+                        contact: 'Kapcsolatfelvétel',
                         title: 'Rólunk'
                     }
                 case 'PRODUCTS':
