@@ -1,6 +1,6 @@
 import React from "react";
 import './FAQ.css';
-import ContentTitle from '../ContentTitle/ContentTitle';
+import ContentTitle from '../../ContentTitle/ContentTitle';
 import Question from './question/question';
 
 

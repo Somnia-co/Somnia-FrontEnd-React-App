@@ -1,6 +1,6 @@
 import React from "react";
 import "./ShipRet.css";
-import ContentTitle from "../ContentTitle/ContentTitle";
+import ContentTitle from "../../ContentTitle/ContentTitle";
 
 export default function ShipRet(props) {
   return (

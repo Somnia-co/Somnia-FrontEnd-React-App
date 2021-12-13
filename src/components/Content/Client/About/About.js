@@ -3,7 +3,7 @@ import "./About.css";
 import logo from "../../../../images/Logo/Somnialogo1.png";
 import { GetTranslation } from "../../../../public/Dictionary.js";
 import { UseLanguageContext } from "../../../../globalContext/context/LanguageContext";
-import ContentTitle from "../ContentTitle/ContentTitle.js";
+import ContentTitle from "../../ContentTitle/ContentTitle";
 import { UseActiveContentContext } from "../../../../globalContext/context/ActiveContentContext";
 
 export default function About(props) {

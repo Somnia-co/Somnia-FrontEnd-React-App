@@ -1,6 +1,6 @@
 import React from "react";
 import "./Contact.css";
-import ContentTitle from "../ContentTitle/ContentTitle";
+import ContentTitle from "../../ContentTitle/ContentTitle";
 
 export default function Contact(props) {
   return (

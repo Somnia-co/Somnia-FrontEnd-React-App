@@ -5,7 +5,7 @@ import CollectionButton from "./collection/CollectionButton.js";
 import { GetTranslation } from "../../../../public/Dictionary.js";
 import { UseLanguageContext } from "../../../../globalContext/context/LanguageContext";
 import {UseActiveContentContext} from '../../../../globalContext/context/ActiveContentContext';
-import ContentTitle from "../ContentTitle/ContentTitle";
+import ContentTitle from "../../ContentTitle/ContentTitle";
 
 export default function Collections(props) {
   const component = "Collections";

@@ -4,7 +4,7 @@ import { GetTranslation } from "../../../../public/Dictionary.js";
 import { UseLanguageContext } from "../../../../globalContext/context/LanguageContext";
 import { GetProducts } from "../../../../public/Products/Products.js";
 import SingleType from "./SingleTypeOfProduct/SingleTypeOfProduct.js";
-import ContentTitle from "../ContentTitle/ContentTitle.js";
+import ContentTitle from "../../ContentTitle/ContentTitle.js";
 
 export default function Products(props) {
   const [CurrentlyShownProducts, SetCurrentlyShwownProducts] = useState();

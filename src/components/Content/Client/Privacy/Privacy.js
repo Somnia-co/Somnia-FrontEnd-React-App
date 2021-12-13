@@ -1,7 +1,7 @@
 import React from "react";
 import "./Privacy.css";
 //import logo from "../../../../images/Logo/Somnialogo1.png";
-import ContentTitle from "../ContentTitle/ContentTitle";
+import ContentTitle from "../../ContentTitle/ContentTitle";
 
 export default function Privacy(props) {
   return (
