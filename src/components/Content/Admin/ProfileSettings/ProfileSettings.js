@@ -10,16 +10,21 @@ export default function ProfileSettings(props){
         sectionTitle: 'Update password',
         sectionContent: 
         <form>
-            Old password: <input type="password" name="oldPw"/><br/>
+            Previous password: <input type="password" name="oldPw"/><br/>
             New password: <input type="password" name="newPw1"/><br/>
             New password again: <input type="password" name="newPw2"/><br/>
+            <input type="submit" value="Update password"/><br/>
         </form>
         ,
         id:1
     },{
         sectionTitle: "Update email",
-        sectionContent: "Old email, new email", 
-        id:2
+        sectionContent:
+        <form>
+        Previous e-mail: <input type="email" name="oldEmail"/><br/>
+        New e-mail: <input type="email" name="newEmail"/><br/>
+        <input type="submit" value="Update e-mail"/><br/>
+    </form>
     },{
         sectionTitle: "Light/dark theme",
         sectionContent: <button>Switch theme</button>, 
