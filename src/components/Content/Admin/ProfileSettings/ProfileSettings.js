@@ -13,7 +13,7 @@ export default function ProfileSettings(props){
             Previous password: <input type="password" name="oldPw"/><br/>
             New password: <input type="password" name="newPw1"/><br/>
             New password again: <input type="password" name="newPw2"/><br/>
-            <input type="submit" value="Update password"/><br/>
+            <input type="submit" value="Update"/><br/>
         </form>
         ,
         id:1
@@ -23,7 +23,7 @@ export default function ProfileSettings(props){
         <form>
         Previous e-mail: <input type="email" name="oldEmail"/><br/>
         New e-mail: <input type="email" name="newEmail"/><br/>
-        <input type="submit" value="Update e-mail"/><br/>
+        <input type="submit" value="Update"/><br/>
     </form>
     },{
         sectionTitle: "Light/dark theme",
