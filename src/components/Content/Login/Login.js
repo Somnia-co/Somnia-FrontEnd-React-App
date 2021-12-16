@@ -26,7 +26,7 @@ export default function Login(props){
 
             <div className='RowFlex'>
                 <div className='optionAbout' onClick={() => ActiveContent.HandleChange('MENU')}>{translation.cancel}</div>
-                <div className='optionAbout'>{translation.login}</div>
+                <div className='optionAbout' onClick={() => ActiveContent.HandleChange('MENU')}>{translation.login}</div>
             </div>
         </div>
     )
