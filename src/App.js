@@ -16,7 +16,10 @@ export default function App() {
   useEffect(() => {
     document.title = "Somnia";
   });
-
+  fetch('http://localhost:8080/users')
+  .then(response => console.log(response))
+  .then(data => console.log(data));
+  
   //the function for changing React function state
   function handleChange(newStateValue) {
     switch (newStateValue.type.toUpperCase()) {
