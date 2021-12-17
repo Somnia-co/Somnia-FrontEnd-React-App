@@ -1,6 +1,6 @@
 //we will get all products here, it's for Products option in main menu
 //export keyword is for being able to export it in different pieces of code
-export function GetProducts() {
+export async function GetProducts() {
   //we have to fill those arrays, the pattern is: {name: 'bla', img:'dsa', id:12}
   //image in base64String
 
@@ -58,6 +58,10 @@ export function GetProducts() {
       img: '.src/tee/tee2.jpg'
     }
   ];
+
+  let products =fetch('http://localhost:8080/products/')
+  .then(res => res.json())
+  .then(data => {console.log(data)});
 
   return [
     { products: hoodies , type: "hoodies" },

@@ -8,6 +8,24 @@ import {UseActiveContentContext} from "../../../globalContext/context/ActiveCont
 
 export default function Login(props){
 
+    async function LogIn(){
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+        const response = await fetch("http://localhost:8080/users/Login", {
+            method: 'POST',
+            body: JSON.stringify({
+                "username": username,
+                "password": password
+            }),
+            headers: {
+                'Content-Type': 'application/json'
+              }
+        });
+        console.log(response.json());
+        ActiveContent.HandleChange('MENU')
+        return;
+
+    }
     const globalLanguage = UseLanguageContext();
     const ActiveContent = UseActiveContentContext();
     const translation = GetTranslation('Login',globalLanguage.value);
@@ -16,17 +34,17 @@ export default function Login(props){
             <img className='LoginLogo' src={logo} alt='Login Somnia logo'></img>
 
             <label class='LoginLabel'>{translation.emailLogin}</label>
-            <input class='LoginInput' type='text' placeholder={translation.emailPlaceHolder} name='loginOrPassword'></input>
+            <input id='username' class='LoginInput' type='text' placeholder={translation.emailPlaceHolder} name='loginOrPassword'></input>
 
             <label class='LoginLabel'>{translation.password}</label>
-            <input class='LoginInput' type='password' placeholder={translation.password} name='password'></input>
+            <input id='password' class='LoginInput' type='password' placeholder={translation.password} name='password'></input>
 
             <h3 onClick={() => {ActiveContent.HandleChange('Register')}}>{translation.noAccount}</h3>
             <div onClick={() => ActiveContent.HandleChange('Admin')}> <button>Admin site</button> </div>
 
             <div className='RowFlex'>
                 <div className='optionAbout' onClick={() => ActiveContent.HandleChange('MENU')}>{translation.cancel}</div>
-                <div className='optionAbout'>{translation.login}</div>
+                <div className='optionAbout' onClick={() => ActiveContent.HandleChange('MENU')}>{translation.login}</div>
             </div>
         </div>
     )
