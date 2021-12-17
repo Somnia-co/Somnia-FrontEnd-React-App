@@ -10,12 +10,30 @@ export default function Register(props) {
   const globalLanguage = UseLanguageContext();
   const transaltion = GetTranslation('register',globalLanguage.value);
 
+  async function onRegister(){
+    const username = document.getElementById('RegLog').value;
+        const password = document.getElementById('RegPas').value;
+        const response = await fetch("http://localhost:8080/users/Register", {
+            method: 'POST',
+            body: JSON.stringify({
+                "username": username,
+                "password": password
+            }),
+            headers: {
+                'Content-Type': 'application/json'
+              }
+        });
+        console.log(response.json());
+        ActiveContent.HandleChange('MENU')
+        return;
+  }
   return (
     <div className="RegisterForm">
       <img className="LoginLogo" src={logo} alt="Register Somnia logo"></img>
 
       <label class="RegisterLabel">{transaltion.emailLogin}</label>
       <input
+      id='RegLog'
         class="RegisterInput"
         type="text"
         placeholder={transaltion.email}
@@ -24,6 +42,7 @@ export default function Register(props) {
 
       <label class="RegisterLabel">{transaltion.password}</label>
       <input
+      id='RegPas'
         class="RegisterInput"
         type="password"
         placeholder={transaltion.password}
@@ -45,7 +64,7 @@ export default function Register(props) {
         >
           {transaltion.cancel}
         </div>
-        <div className="optionAbout">{transaltion.register}</div>
+        <div onClick={() => onRegister()} className="optionAbout">{transaltion.register}</div>
       </div>
     </div>
   );
