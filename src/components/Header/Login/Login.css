@@ -1,14 +1,13 @@
-.loginIcon{
-    fill:var(--mainColor);
-    width: 7vh;
-    height: 7vh;
-    cursor: pointer;
-    transition: var(--transitionDuration);
+.LoginIcon {
+  fill: var(--mainColor);
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  transition: var(--transitionDuration);
 }
-.loginIcon:hover{
-    fill:var(--hoverColor);
+.LoginIcon:hover {
+  fill: var(--hoverColor);
 }
-.Hidden{
-    display: none;
+.Hidden {
+  display: none;
 }
-

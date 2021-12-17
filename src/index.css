@@ -5,6 +5,7 @@
   --mainColor: #ffffff;
   --hoverColor: grey;
   --elementActiveColor: silver;
+  --transparentBlack: rgba(0, 0, 0, 0.2);
   --transitionDuration: 0.2s;
   --fontFamily: "Roboto", sans-serif;
   --footerHeight: 6vh;
@@ -19,9 +20,9 @@
 
   --ContentMargin: 0;
 
-  --SearchIconSize: 30px;
-  --SearchBarHeight: 25px;
-  --SearchBarWidth: 300px;
+  --SearchIconSize: 2rem;
+  --SearchBarHeight: 2rem;
+  --SearchBarWidth: 10rem;
   --SearchBarBorderRadius: 15px;
 }
 
