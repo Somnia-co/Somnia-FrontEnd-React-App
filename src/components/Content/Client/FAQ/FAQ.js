@@ -16,7 +16,7 @@ export default function FAQ(props){
         id:2
     },{
         question: "What material the products are made of?",
-        answer: "Most of our products use 100% cotton.", 
+        answer: "Most of our products are made of 100% cotton.", 
         id: 3
     }]
 
