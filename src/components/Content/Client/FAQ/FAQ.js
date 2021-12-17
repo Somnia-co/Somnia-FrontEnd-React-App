@@ -7,16 +7,16 @@ import Question from './question/question';
 export default function FAQ(props){
 
     const questions = [{
-        question: 'Who is the author?',
-        answer: "It's none of your business.",
+        question: 'How can I order products?',
+        answer: "Go to the products' page to look around, or simply just contact us by filling out the contact form.",
         id:1
     },{
-        question: "Does santa exist?",
-        answer: "Oh again, go to mummy", 
+        question: "Who's the main audience of the products?",
+        answer: "Teenagers, young-adults or any other extravagant-styled, fashion-following people who would like to show the world a little part of their personal styles by wearing the Somnia brand.", 
         id:2
     },{
-        question: "Can i get some for free?",
-        answer: "Unless you pay for it", 
+        question: "What material the products are made of?",
+        answer: "Most of our products use 100% cotton.", 
         id: 3
     }]
 
