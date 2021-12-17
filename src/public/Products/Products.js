@@ -1,39 +1,46 @@
 //we will get all products here, it's for Products option in main menu
 //export keyword is for being able to export it in different pieces of code
-export async function GetProducts() {
+import hoodie1 from '../../images/somniapics_small/adfrontHOODIE.jpg'
+import hoodie2 from '../../images/somniapics_small/adbackHOODIE.jpg'
+import hat1 from '../../images/somniapics_small/baseball.jpg';
+import hat2 from '../../images/somniapics_small/half.jpg';
+import crewneck1 from '../../images/somniapics_small/softfront.jpg';
+import crewneck2 from '../../images/somniapics_small/softback.jpg';
+
+export function GetProducts() {
   //we have to fill those arrays, the pattern is: {name: 'bla', img:'dsa', id:12}
   //image in base64String
 
   let hoodies = [
     {
       name: "hoodie1",
-      img: ".src/hoodies/hoodie1.jpg",
+      img: hoodie1,
     },
     {
       name: "hoodie2",
-      img: ".src/hoodies/hoodie2.jpg",
+      img: hoodie2,
     },
   ];
 
   let hats = [
     {
       name: "hat1",
-      img: ".src/hats/hat1.jpg",
+      img: hat1,
     },
     {
       name: "hat2",
-      img: ".src/hats/hat2.jpg",
+      img: hat2,
     },
   ];
 
   let crewnecks = [
     {
       name: "crewneck1",
-      img: ".src/crewnecks/crewneck1.jpg",
+      img: crewneck1,
     },
     {
       name: "crewneck2",
-      img: ".src/crewnecks/crewneck2.jpg",
+      img: crewneck2,
     },
   ];
 
@@ -59,15 +66,9 @@ export async function GetProducts() {
     }
   ];
 
-  let products =fetch('http://localhost:8080/products/')
-  .then(res => res.json())
-  .then(data => {console.log(data)});
-
   return [
     { products: hoodies , type: "hoodies" },
     { products: hats, type: "hats" },
-    { products: crewnecks, type: "crewnecks" },
-    { products: pants, type: "pants" },
-    { products: tees, type: "tees" },
+    { products: crewnecks, type: "crewnecks" }
   ];
 }
