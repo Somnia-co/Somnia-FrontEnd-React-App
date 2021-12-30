@@ -30,19 +30,19 @@ export default function Login(props) {
     <div className="LoginForm">
       <img className="LoginLogo" src={logo} alt="Login Somnia logo"></img>
 
-      <label class="LoginLabel">{translation.emailLogin}</label>
+      <label className="LoginLabel">{translation.emailLogin}</label>
       <input
         id="username"
-        class="LoginInput"
+        className="LoginInput"
         type="text"
         placeholder={translation.emailPlaceHolder}
         name="loginOrPassword"
       ></input>
 
-      <label class="LoginLabel">{translation.password}</label>
+      <label className="LoginLabel">{translation.password}</label>
       <input
         id="password"
-        class="LoginInput"
+        className="LoginInput"
         type="password"
         placeholder={translation.password}
         name="password"

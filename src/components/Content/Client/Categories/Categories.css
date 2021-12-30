@@ -1,4 +1,4 @@
-.Collections {
+.Categories {
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -7,12 +7,15 @@
   flex-wrap: wrap;
 }
 
-.CollectionsTitle {
-  color: white;
-  font-family: var(--font-family);
+.CategoryGrid {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.Collection {
+.Category {
+  cursor: pointer;
   border: solid var(--mainColor) 2px;
   border-radius: 0;
   min-width: 300px;
@@ -31,7 +34,16 @@
   font-size: 1.2rem;
 }
 
-.Collection:hover {
+.Category:hover {
   background-color: white;
   color: black;
+}
+/* 
+.Category img {
+  width: 100%;
+} */
+
+.DevNote {
+  color: white;
+  font-size: 0.75rem;
 }

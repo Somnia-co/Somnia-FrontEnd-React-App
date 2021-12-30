@@ -8,7 +8,6 @@ import { UseActiveContentContext } from "../../../../globalContext/context/Activ
 
 //props are those strange properties in tags: <div props-'props'></div>
 function MainMenu(props) {
-
   const globalLanguage = UseLanguageContext();
   const ActiveContent = UseActiveContentContext();
   const translation = GetTranslation("MainMenu", globalLanguage.value);
@@ -16,14 +15,23 @@ function MainMenu(props) {
   return (
     <div className="MainMenu">
       <img className="MainMenuLogo" src={logo} alt="Big Somnia Logo"></img>
-      <h1 className="MenuItem" onClick={() => ActiveContent.HandleChange("ABOUT")}>
+      <h1
+        className="MenuItem"
+        onClick={() => ActiveContent.HandleChange("ABOUT")}
+      >
         {translation.about}
       </h1>
-      <h1
+      {/* <h1
         className="MenuItem"
         onClick={() => ActiveContent.HandleChange("PRODUCTS")}
       >
         {translation.products}
+      </h1> */}
+      <h1
+        className="MenuItem"
+        onClick={() => ActiveContent.HandleChange("CATEGORIES")}
+      >
+        {translation.categories}
       </h1>
       <h1
         className="MenuItem"

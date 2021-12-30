@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Products.css";
 import { GetTranslation } from "../../../../public/Dictionary.js";
 import { UseLanguageContext } from "../../../../globalContext/context/LanguageContext";
-import { GetProducts } from "../../../../public/Products/Products.js";
+import { GetProducts } from "../../../../public/Products/GetProducts.js";
 import SingleType from "./SingleTypeOfProduct/SingleTypeOfProduct.js";
 import ContentTitle from "../../ContentTitle/ContentTitle.js";
 
@@ -15,13 +15,11 @@ export default function Products(props) {
   const translation = GetTranslation(component, globalLanguage.value);
 
   return (
-    <div class="Collections">
-      <ContentTitle
-        onChange={props.onChange}
-        title={translation.title}
-      ></ContentTitle>
-      <div class='Filters'>
-        <h3>Price: </h3>
+    <div className="Collections">
+      <ContentTitle onChange={props.onChange} title={translation.title} />
+      <div className="Filters">
+        <h3>Sort by:</h3>
+        <h3>A-Z: </h3>
         <h3>Collection: </h3>
       </div>
       <div className="Products">

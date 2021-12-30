@@ -1,10 +1,10 @@
 import React from "react";
 import "./Collections.css";
-import { GetCollections } from "../../../../public/CollectionsList";
+import { GetCollections } from "../../../../public/GetCollections";
 import CollectionButton from "./collection/CollectionButton.js";
 import { GetTranslation } from "../../../../public/Dictionary.js";
 import { UseLanguageContext } from "../../../../globalContext/context/LanguageContext";
-import {UseActiveContentContext} from '../../../../globalContext/context/ActiveContentContext';
+import { UseActiveContentContext } from "../../../../globalContext/context/ActiveContentContext";
 import ContentTitle from "../../ContentTitle/ContentTitle";
 
 export default function Collections(props) {
@@ -16,14 +16,22 @@ export default function Collections(props) {
   let translation = GetTranslation(component, globalLanguage.value);
 
   return (
-    <div class="Collections">
+    <div className="Collections">
       <ContentTitle
         onChange={props.onChange}
         title={translation.title}
       ></ContentTitle>
-      <div className='Collections'>
+      <div className="Collections">
         {collections.map((collection) => {
-          return <CollectionButton onClick={() => ActiveContent.HandleChange('SingleCollection',collection.name)}>{collection}</CollectionButton>;
+          return (
+            <CollectionButton
+              onClick={() =>
+                ActiveContent.HandleChange("SingleCollection", collection.name)
+              }
+              key={collection.name}
+              text={collection}
+            />
+          );
         })}
       </div>
     </div>

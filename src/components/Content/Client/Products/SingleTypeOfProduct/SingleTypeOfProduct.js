@@ -1,30 +1,33 @@
-import React,{useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import "./SingeTypeStyle.css";
 
 export default function SingleTypeComponent(props) {
-
   //make sure the products doesn't get out of array
-  function ChangeItem(setValue){
-      if(setValue < 0) ChangeCurrentItem(props.products.length - 1);
-      else if(setValue >= props.products.length) ChangeCurrentItem(0);
-      else ChangeCurrentItem(setValue);
+  function ChangeItem(setValue) {
+    if (setValue < 0) ChangeCurrentItem(props.products.length - 1);
+    else if (setValue >= props.products.length) ChangeCurrentItem(0);
+    else ChangeCurrentItem(setValue);
   }
-    //state of our component
+  //state of our component
   const [CurrentItemNumber, ChangeCurrentItem] = useState(0);
 
   //we have here current product
   let OneTypeProducts = props.products;
   let currentItem = OneTypeProducts[CurrentItemNumber];
 
-
   return (
     <div className="SingleType">
       <h2>{props.type}</h2>
-      <img src={currentItem.img} alt={currentItem.name}></img>
+
+      <picture>
+        <source srcset={currentItem.webp} type="image/webp" />
+        <img src={currentItem.img} alt={currentItem.name} />
+      </picture>
+
       <div className="RowFlex">
         <svg
           onClick={() => ChangeItem(CurrentItemNumber - 1)}
-          className='Arrow Back'
+          className="Arrow Back"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
         >
@@ -33,7 +36,7 @@ export default function SingleTypeComponent(props) {
         <h3>{currentItem.name}</h3>
         <svg
           onClick={() => ChangeItem(CurrentItemNumber + 1)}
-          className='Arrow Next'
+          className="Arrow Next"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
         >

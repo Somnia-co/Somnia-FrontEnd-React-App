@@ -1,37 +1,39 @@
-.SingleType{
-    border: solid var(--mainColor) 2px;
-    width: 40vh;
-    height: 50vh;
-    margin: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
+.SingleType {
+  border: solid var(--mainColor) 2px;
+  width: 40vh;
+  margin: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
 }
 
-.SingleType h2{
-    color: var(--mainColor);
-    font-family: 'Roboto', sans-serif;
-    font-weight: lighter;
-
-}
-.SingleType img{
-    width: 90%;
-}
-.SingleType h3{
-    color: var(--mainColor);
-    font-family: var(--fontFamily);
-    font-weight: lighter;
+.SingleType h2 {
+  color: var(--mainColor);
+  font-family: "Roboto", sans-serif;
+  font-weight: lighter;
 }
 
-.Arrow{
-    fill:var(--mainColor);
-    height: 20px;
-    cursor: pointer;
+.SingleType img {
+  width: 100%;
 }
-.Arrow:hover{
-    fill:var(--hoverColor);
+
+.SingleType h3 {
+  color: var(--mainColor);
+  font-family: var(--fontFamily);
+  font-weight: lighter;
 }
-.Arrow.Back{
-    transform:rotate(180deg);
+
+.Arrow {
+  fill: var(--mainColor);
+  height: 20px;
+  cursor: pointer;
+}
+
+.Arrow:hover {
+  fill: var(--hoverColor);
+}
+
+.Arrow.Back {
+  transform: rotate(180deg);
 }

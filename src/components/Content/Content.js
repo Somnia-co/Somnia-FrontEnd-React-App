@@ -16,6 +16,7 @@ import Terms from "./Client/Terms/Terms";
 import Privacy from "./Client/Privacy/Privacy";
 import ShipRet from "./Client/ShippingReturns/ShipRet";
 import Admin from "./Admin/Admin";
+import Categories from "./Client/Categories/Categories";
 //--------------------
 import { UseActiveContentContext } from "../../globalContext/context/ActiveContentContext";
 
@@ -26,27 +27,29 @@ function Content(props) {
   function GetActiveElement() {
     switch (ActiveContentContext.value) {
       case "LOGIN":
-        return <Login></Login>;
+        return <Login />;
       case "MENU":
-        return <MainMenu></MainMenu>;
+        return <MainMenu />;
       case "ABOUT":
-        return <About></About>;
+        return <About />;
       case "COLLECTIONS":
-        return <Collections></Collections>;
+        return <Collections />;
+      case "CATEGORIES":
+        return <Categories />;
       case "PRODUCTS":
-        return <Products></Products>;
+        return <Products />;
       case "REGISTER":
-        return <Register></Register>;
+        return <Register />;
       case "CONTACT":
-        return <Contact></Contact>;
+        return <Contact />;
       case "FAQ":
-        return <FAQ></FAQ>;
+        return <FAQ />;
       case "TERMS":
-        return <Terms></Terms>;
+        return <Terms />;
       case "PRIVACY":
-        return <Privacy></Privacy>;
+        return <Privacy />;
       case "SHIPRET":
-        return <ShipRet></ShipRet>;
+        return <ShipRet />;
       case "ADMIN":
         return <Admin />;
       default:
